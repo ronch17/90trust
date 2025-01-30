@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WP Mail SMTP by WPForms &#8211; The Most Popular SMTP and Email Log Plugin - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-12-28 16:21:23+0000\n"
+"PO-Revision-Date: 2025-01-29 16:04:41+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -3710,7 +3710,7 @@ msgstr "<p>Der Standardmailer (PHP) ist derzeit ausgewählt, wird jedoch nicht e
 #: assets/languages/wp-mail-smtp-vue.php:11 src/Admin/Area.php:521
 #: src/Admin/Pages/DebugEventsTab.php:153
 msgid "Heads up!"
-msgstr "Kopf hoch!"
+msgstr "Achtung!"
 
 #: src/Admin/Review.php:167
 msgid "I already did"
@@ -4613,7 +4613,7 @@ msgstr "Anderer SMTP-Server"
 #. translators: %1$s - Plugin name causing conflict.
 #: src/Conflicts.php:492
 msgid "Heads up! WP Mail SMTP has detected %1$s is activated. Please deactivate %1$s to prevent conflicts."
-msgstr "Kopf hoch! WP Mail SMTP hat festgestellt, dass %1$s aktiviert ist. Bitte deaktiviere %1$s, um Konflikte zu vermeiden."
+msgstr "Achtung! WP Mail SMTP hat festgestellt, dass %1$s aktiviert ist. Bitte deaktiviere %1$s, um Konflikte zu vermeiden."
 
 #. translators: %s - plugin admin page URL.
 #: src/Core.php:558

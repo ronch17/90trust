@@ -21,7 +21,11 @@ define( 'DB_USER', 'wordpress' );
 define( 'DB_PASSWORD', 'q+NF6_6rXTxM@?UJ' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'db:3306' );
+if (defined('CRM_ENV') && CRM_ENV === 'development') {
+    define('DB_HOST', 'db:3306');
+} else {
+    define('DB_HOST', '127.0.0.1:3306');
+}
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
