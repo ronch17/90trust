@@ -26,3 +26,4 @@ backup/**
 #uploads/
 #vendor/
 /scripts/variables_local.sh
+app/wp-content/wflogs/

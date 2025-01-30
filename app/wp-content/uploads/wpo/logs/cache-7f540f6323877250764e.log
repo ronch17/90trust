@@ -175,3 +175,8 @@
 [2025-01-30 09:07:09 : INFO] - Cache for associated Polylang translation posts for Title: "Open Account" have been purged 
 [2025-01-30 09:07:09 : INFO] - Cache for URL: http://90trust.test/open-account/ has been purged, triggered by action: save_post 
 [2025-01-30 09:37:03 : INFO] - Cache for homepage has been purged due to change in the Homepage displays options, triggered by action: update_option_page_on_front 
+[2025-01-30 09:48:06 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-01-30 09:48:07 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-01-30 09:49:42 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-01-30 09:50:32 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-01-30 09:54:00 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
