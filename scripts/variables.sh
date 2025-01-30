@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+DB_PASSWORD="q+NF6_6rXTxM@?UJ"
+
+DEST_USER="proftit"
+DEST_SERVER="${DEST_USER}@77.37.49.125"
+DEST_SERVER_IP="77.37.49.125"
+DEST_DOCKER_USER="www-data"
+DEST_DOMAIN="90trust.com"
+DEST_DIRECTORY="90trust"
+DEST_BRANCH="main"
+DEST_DOCKER_NAMESPACE="90trust"
+DEST_DB_EXPORT_NAME="90trust-com"
+
+#STAGE_USER="integration"
+#STAGE_SERVER="${STAGE_USER}@35.241.169.22"
+#STAGE_DOCKER_USER="www-data"
+#STAGE_DOCKER_NAMESPACE="90trust"
+#STAGE_DIRECTORY="90trust"
+#STAGE_BRANCH="master"
+#STAGE_DB_EXPORT_NAME="90trust-stage"
+
+
+source ./variables_local.sh

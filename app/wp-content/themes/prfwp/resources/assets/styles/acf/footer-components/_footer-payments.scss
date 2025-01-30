@@ -1,0 +1,50 @@
+/* stylelint-disable */
+.acfm-footer-payments {
+    position: relative;
+    padding: 1em 0;
+    font-size: 80%;
+
+    @media #{$md} {
+        @include font-size-md();
+    }
+
+    .acf-row__col & {
+        margin-bottom: 2em;
+    }
+
+    &__container {
+        max-width: 120rem;
+    }
+
+    &__icon {
+        &.monochrome {
+            -webkit-filter: grayscale(100%) contrast(120%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+            filter: grayscale(100%) contrast(120%);
+            filter: gray; /* IE6-9 */
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: 0;
+        margin: 0 auto;
+        list-style: none;
+
+        @media #{$xl} {
+            justify-content: flex-end;
+        }
+
+        li {
+            svg {
+                display: block;
+                width: 2.96779em;
+                height: 5.25em;
+                margin: 0 auto;
+            }
+        }
+    }
+}

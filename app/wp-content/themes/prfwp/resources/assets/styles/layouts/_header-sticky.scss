@@ -1,0 +1,39 @@
+// stylelint-disable
+.prfwp-header {
+    z-index: 999;
+    @include transition(background padding transform);
+    //
+    //&.sticky {
+    //    background: $header_sticky_background;
+    //}
+}
+
+.prfwp-navbar__brand {
+    @include transition(transform color);
+    position: relative;
+
+    //.sticky & {
+    //    @include transition(transform color);
+    //    transform: scale(0.8);
+    //}
+}
+
+.sticky {
+    &:not(.show-nav) {
+        background: rgba(27, 28, 84, 0.96);
+    }
+
+    .menu-item {
+        color: $brand_white;
+    }
+
+    .sub-menu a {
+        color: $brand_white;
+    }
+
+    @media #{$navbar_breakpoint} {
+        .prfwp-customerTopBar {
+            top: 100%;
+        }
+    }
+}

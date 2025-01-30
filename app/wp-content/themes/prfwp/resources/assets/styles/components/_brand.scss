@@ -1,0 +1,16 @@
+/* stylelint-disable */
+
+.prfwp-brand {
+    @include logo-dimensions(350, 52, 40, 350);
+
+    display: block;
+    max-width: 70vw;
+    height: 4em;
+    color: currentColor;
+    transform-origin: center left;
+
+    @media #{$md} {
+        width: 15em;
+        max-width: 45vw;
+    }
+}

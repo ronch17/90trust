@@ -1,0 +1,30 @@
+/* stylelint-disable */
+
+.acfm-footer-logo {
+    @media #{$md} {
+        display: block;
+    }
+
+    &__link {
+        @include logo-dimensions(300, 30, 50, 300);
+
+        display: block;
+        height: 10rem;
+        margin-bottom: 2em;
+
+        svg {
+            position: relative;
+            top: -15%;
+            @media #{$until_md} {
+                left: 22%;
+            }
+            @include transition();
+        }
+
+        &:hover {
+            svg {
+                @include transition();
+            }
+        }
+    }
+}

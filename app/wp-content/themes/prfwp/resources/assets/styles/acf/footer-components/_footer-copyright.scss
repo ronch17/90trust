@@ -1,0 +1,9 @@
+// stylelint-disable
+.acfm-footer-copyright {
+    position: relative;
+    padding-top: 2rem;
+    font-size: 1.6rem;
+    @media #{$md} {
+        text-align: left;
+    }
+}
