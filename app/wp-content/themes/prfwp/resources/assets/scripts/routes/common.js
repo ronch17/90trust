@@ -527,7 +527,7 @@ export default {
                 const row5tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: row4,
-                        start: 'bottom+=2000 top',
+                        start: 'bottom+=1400 top',
                         end: 'bottom bottom',
                         toggleActions: 'play none reverse none',
                         scrub: 2,
@@ -558,7 +558,7 @@ export default {
                 const footertl = gsap.timeline({
                     scrollTrigger: {
                         trigger: row4,
-                        start: 'clamp(bottom+=2400 top)',
+                        start: 'clamp(bottom+=1800 top)',
                         end: 'bottom bottom',
                         toggleActions: 'play none reverse none',
                         scrub: 2,

@@ -113,7 +113,7 @@ $block_ui_loader_border_color: rgba($brand_dark, 0.2);
 
 /** Forms */
 $form_control_color: $brand_dark;
-$form_control_placeholder: #d2d2d2;
+$form_control_placeholder: $brand_dark;
 $form_control_background: $brand_white;
 $form_control_height: 5rem;
 $form_control_radius: em(6);
