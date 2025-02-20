@@ -55,6 +55,10 @@
                     }
                 }
 
+                &__title {
+                    font-size: 2.5rem;
+                }
+
                 &__text {
                     display: block;
                     height: 23rem;
@@ -118,15 +122,15 @@
     &__text {
         height: 0;
         max-height: 0;
-        padding: 0 3rem;
+        padding: 0 1rem;
         overflow: hidden;
-        font-size: 12px;
+        font-size: 10px;
 
         transition: max-height 0.4s ease-in-out;
 
         @media #{$until_xxl} {
-            font-size: 8px;
             padding: 0;
+            font-size: 8px;
         }
     }
 

@@ -206,7 +206,7 @@ export default {
                     ) // Align this animation with the previous one
                     .fromTo(
                         section2Container,
-                        {  bottom: '0', yPercent: 110},
+                        { bottom: '0', yPercent: 110 },
                         {
                             opacity: 1,
                             duration: 0.7, // Slower duration for 'bottom'
