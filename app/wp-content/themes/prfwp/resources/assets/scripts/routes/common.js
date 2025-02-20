@@ -220,6 +220,7 @@ export default {
                         start: 'top bottom',
                         end: 'top bottom',
                         toggleActions: 'play none reverse none',
+                        scrub: 1,
                     },
                 });
 
@@ -526,6 +527,7 @@ export default {
                         start: 'bottom+=2000 top',
                         end: 'bottom bottom',
                         toggleActions: 'play none reverse none',
+                        scrub: 2,
                     },
                 });
 
@@ -556,6 +558,7 @@ export default {
                         start: 'clamp(bottom+=2400 top)',
                         end: 'bottom bottom',
                         toggleActions: 'play none reverse none',
+                        scrub: 2,
                     },
                 });
 
