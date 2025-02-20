@@ -47,6 +47,9 @@ $shadows-big: multiple-box-shadow(100);
     .acfm-row {
         @media #{$xl} {
             padding: 10rem;
+        }
+
+        @media (min-height: 1000px) {
             margin-bottom: 8.5%;
         }
 

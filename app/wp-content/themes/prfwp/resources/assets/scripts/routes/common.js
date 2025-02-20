@@ -717,7 +717,6 @@ export default {
             );
         });
 
-
         const greenMountainsBg = document.querySelector('.green-mountains .acfm-bg-image');
 
         gsap.fromTo(
@@ -736,7 +735,6 @@ export default {
                 },
             }
         );
-
 
         /////////// safety & trust \\\\\\\\\
 
