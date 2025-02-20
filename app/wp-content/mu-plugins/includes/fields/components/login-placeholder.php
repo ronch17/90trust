@@ -13,6 +13,7 @@ $login_placeholder
         'preview_size'  => 'thumbnail',
         'return_format' => 'url'
     ] )
+    ->addImage( 'image', [ 'preview_size' => 'medium', 'label' => 'Image' ] )->setWidth( 15 )
     ->addTextarea( 'title-left', [
         'rows'      => 1,
         'new_lines' => 'br',

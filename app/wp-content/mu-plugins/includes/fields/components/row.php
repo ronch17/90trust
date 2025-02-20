@@ -57,7 +57,9 @@ $row
     ->addLayout( get_field_partial( 'components.lotties' ) )
     ->addLayout( get_field_partial( 'components.video' ) )
     ->addLayout( get_field_partial( 'components.accordion' ) )
-	->endFlexibleContent()
+    ->addLayout( get_field_partial( 'components.homepage-slider' ) )
+    ->addLayout( get_field_partial( 'components.login-placeholder' ) )
+    ->endFlexibleContent()
 	->addFields( get_field_partial( 'partials.row-settings' ) )
 	->endRepeater();
 

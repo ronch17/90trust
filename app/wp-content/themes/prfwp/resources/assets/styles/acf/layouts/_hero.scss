@@ -23,19 +23,32 @@ $shadows-big: multiple-box-shadow(100);
     }
 }
 
-// return in parallax
-
-//section {
-//    min-height: 279vh !important;
-//}
-
 .home-hero {
-    z-index: 99;
+    z-index: 99 !important;
     width: 100%;
 
+    #coins {
+        @media #{$until_xl} {
+            display: none;
+        }
+    }
+
+    .acfm-bg-image {
+        @media #{$xl} {
+            display: none;
+        }
+    }
+
+    @media #{$until_xl} {
+        height: 60vh !important;
+        margin-bottom: 0 !important;
+    }
+
     .acfm-row {
-        padding: 10rem;
-        margin-bottom: 8.5%;
+        @media #{$xl} {
+            padding: 10rem;
+            margin-bottom: 8.5%;
+        }
 
         &__col:nth-child(1) {
             z-index: 11;
@@ -43,6 +56,12 @@ $shadows-big: multiple-box-shadow(100);
             @media #{$xxxl} {
                 padding-left: 38rem;
             }
+        }
+    }
+
+    .acfm-title {
+        @media (max-width: em(2500, 16)) {
+            font-size: 6rem;
         }
     }
 
@@ -67,10 +86,12 @@ $shadows-big: multiple-box-shadow(100);
         }
 
         &:has(.mountains3) {
+            top: 115%;
+
             &::before {
                 position: absolute;
-                bottom: -10%;
-                z-index: 99;
+                bottom: 0;
+                z-index: 0;
                 width: 133%;
                 height: 17vh;
                 content: '';
@@ -93,6 +114,29 @@ $shadows-big: multiple-box-shadow(100);
         &:has(.middle-coin) {
             position: relative;
             z-index: 9;
+        }
+
+        @media #{$until_xl} {
+            &:has(.left-coin),
+            &:has(.right-coin),
+            &:has(.middle-coin),
+            &:has(.mountains1),
+            &:has(.mountains2),
+            &:has(.mountains3) {
+                display: none;
+            }
+        }
+
+        .mobile-coins {
+            max-width: 55vw;
+            @media #{$xl} {
+                display: none;
+            }
+
+            @media #{$until_md} {
+                position: relative;
+                bottom: 15rem;
+            }
         }
     }
 
@@ -137,6 +181,15 @@ $shadows-big: multiple-box-shadow(100);
             border: 2px solid $brand_white;
         }
     }
+
+    .acfm-btn {
+        padding-left: 4rem;
+        margin-top: -10rem;
+
+        @media #{$until_md} {
+            margin-top: -20rem;
+        }
+    }
 }
 
 .contact-hero {
@@ -165,8 +218,18 @@ $shadows-big: multiple-box-shadow(100);
 
 .acfm-hero {
     position: relative;
-    height: auto;
+    z-index: -1;
+    height: 122vh;
     overflow: hidden;
+
+    @media #{$xl} {
+        margin-bottom: -35rem;
+    }
+
+    @media #{$until_lg} {
+        height: 57vh;
+        margin-bottom: -20rem;
+    }
 
     &.acfm-z-index--minus {
         z-index: -1;
@@ -195,11 +258,16 @@ $shadows-big: multiple-box-shadow(100);
         @media #{$xl} {
             padding: 25rem 0 5rem;
         }
+
+        @media #{$until_xxl} {
+            .acfm-title {
+                font-size: 6rem;
+            }
+        }
     }
 
     .acfm-bg-video-bg {
         z-index: 99;
-        background: rgba(0, 0, 0, 0.4);
     }
 }
 

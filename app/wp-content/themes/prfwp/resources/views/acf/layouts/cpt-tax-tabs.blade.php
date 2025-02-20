@@ -23,7 +23,6 @@
              class="{{ $component }}__nav__link acfm-js-tabsLink {{$term['linkClass']}}"
              id="{{$term['id']}}-tab" data-toggle="tab" role="tab" aria-controls="{{$term['id']}}"
              aria-selected="{{$term['ariaSelected']}}">
-            @includeIf('svg.acf.faq.' . $term['id'])
             <span>{{ $term['name'] }} <span class="{{ $component }}__nav__badge">{{count($term['posts'])}}</span></span>
           </a>
         @endforeach

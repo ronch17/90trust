@@ -141,8 +141,8 @@
     line-height: 2.2rem;
     color: $form_control_placeholder;
     background: $form_control_background;
-    border: none;
-    border-radius: 3rem;
+    border: 1px solid $brand_primary;
+    border-radius: 1rem;
 }
 
 @mixin brand-shadow {

@@ -13,7 +13,10 @@ $list_generator
         [
             'default' => 'Default Style',
             'card' => 'Card Style',
-            'card2' => 'Card2 Style'
+            'card2' => 'Card2 Style',
+            'card3' => 'Card3 Style',
+            'card4' => 'Card4 Style',
+            'card5' => 'Card5 Style'
         ]
     )->setWidth( 50 )
     ->addRepeater( 'list_generator', [

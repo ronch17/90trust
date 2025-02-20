@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Safe SVG - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-05-28 23:59:18+0000\n"
+"PO-Revision-Date: 2025-02-01 15:36:40+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,19 +11,27 @@ msgstr ""
 "Language: de\n"
 "Project-Id-Version: Plugins - Safe SVG - Stable (latest release)\n"
 
-#: safe-svg.php:238
+#: includes/safe-svg-settings.php:188
+msgid "Allow large SVG files"
+msgstr "Große SVG-Dateien erlauben"
+
+#: includes/safe-svg-settings.php:55
+msgid "Large Files"
+msgstr "Große Dateien"
+
+#: safe-svg.php:276
 msgid "Sorry, you are not allowed to upload SVG files."
 msgstr "Du bist leider nicht berechtigt, SVG-Dateien hochzuladen."
 
-#: includes/safe-svg-settings.php:103
+#: includes/safe-svg-settings.php:120
 msgid "Select which user roles can upload SVG files."
 msgstr "Wähle aus, welche Benutzerrollen SVG-Dateien hochladen können."
 
-#: includes/safe-svg-settings.php:38
+#: includes/safe-svg-settings.php:47
 msgid "User Roles"
 msgstr "Benutzerrollen"
 
-#: includes/safe-svg-settings.php:31
+#: includes/safe-svg-settings.php:40
 msgid "Safe SVG Settings"
 msgstr "Safe-SVG-Einstellungen"
 
@@ -42,7 +50,7 @@ msgctxt "block title"
 msgid "Safe SVG"
 msgstr "Safe SVG"
 
-#: includes/blocks.php:51 dist/safe-svg-block.js:1
+#: includes/blocks.php:55 dist/safe-svg-block.js:1
 #: includes/blocks/safe-svg/edit.js:209
 msgid "SafeSvg"
 msgstr "SafeSvg"
@@ -57,23 +65,23 @@ msgstr "Erlaubt SVG-Uploads und bereinigen diese, um XML-/SVG-Schwachstellen in 
 msgid "https://wordpress.org/plugins/safe-svg/"
 msgstr "https://de.wordpress.org/plugins/safe-svg/"
 
-#: safe-svg.php:343
+#: safe-svg.php:403
 msgid "Large"
 msgstr "Groß"
 
-#: safe-svg.php:342
+#: safe-svg.php:402
 msgid "Medium"
 msgstr "Mittel"
 
-#: safe-svg.php:341
+#: safe-svg.php:401
 msgid "Thumbnail"
 msgstr "Vorschaubild"
 
-#: safe-svg.php:340
+#: safe-svg.php:400
 msgid "Full Size"
 msgstr "Originalgröße"
 
-#: safe-svg.php:247
+#: safe-svg.php:285
 msgid "Sorry, this file couldn't be sanitized so for security reasons wasn't uploaded"
 msgstr "Diese Datei konnte leider nicht bereinigt werden und wird daher aus Sicherheitsgründen nicht hochgeladen."
 

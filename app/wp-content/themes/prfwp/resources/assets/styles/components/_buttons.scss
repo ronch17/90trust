@@ -88,12 +88,19 @@
 
 @mixin button_primary {
     @include button();
-    @include transition();
     text-transform: uppercase;
-    border: 2px solid $brand_primary;
+    transition: color 0.4s ease, background 0.4s ease;
 
     .acfm-btn__label {
         z-index: 10;
+    }
+
+    &:hover {
+        color: $brand_white;
+        background: $brand_hover;
+        border: 1px solid $brand_primary;
+        outline: 1px solid $brand_primary;
+        outline-offset: 2px;
     }
 }
 

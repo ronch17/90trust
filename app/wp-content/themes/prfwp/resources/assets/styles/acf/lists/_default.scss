@@ -2,10 +2,7 @@
 
 .acfm-list-default {
     display: grid;
-    padding-left: initial;
     margin-bottom: 5rem;
-    //position: relative;
-    //bottom: 25rem;
     text-align: center;
     list-style: none;
     gap: 2.5rem;
@@ -26,6 +23,10 @@
         border: 1px solid $brand_primary;
         border-radius: 2rem;
 
+        @media #{$until_xxl} {
+            flex-direction: column;
+        }
+
         svg {
             min-width: 5rem;
         }
@@ -36,6 +37,12 @@
                     fill: $brand_primary;
                 }
             }
+        }
+    }
+
+    &__content {
+        @media #{$until_xxl} {
+            text-align: center;
         }
     }
 

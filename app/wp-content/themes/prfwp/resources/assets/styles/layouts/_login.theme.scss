@@ -32,8 +32,8 @@
         color: $brand_primary;
 
         &:hover {
-            color: $brand_dark;
-            background: $brand_primary;
+            color: $brand_white;
+            background: $brand_hover;
             border: 2px solid $brand_primary;
         }
     }
@@ -44,11 +44,6 @@
 
         &::after {
             display: none;
-        }
-
-        &:hover {
-            color: $brand_primary;
-            background: $brand_white;
         }
     }
 

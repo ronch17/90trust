@@ -78,3 +78,17 @@
     top: 0;
     z-index: 1;
 }
+
+.template-widget {
+    .prfwp-header {
+        display: none;
+    }
+
+    #topNavigation {
+        color: $brand_dark;
+
+        a {
+            font-weight: $font_weight_light;
+        }
+    }
+}

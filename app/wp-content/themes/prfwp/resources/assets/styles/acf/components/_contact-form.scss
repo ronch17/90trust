@@ -1,18 +1,10 @@
 // stylelint-disable
 .acfm-contact-form {
-    @include brand-shadow();
     padding: 2rem;
     margin: 3rem 0;
-    background: $brand_white;
-    background-size: cover;
-    border-radius: 3rem;
     transition: 0.4s ease-in-out;
     @media #{$xl} {
         padding: 4rem;
-    }
-
-    &:hover {
-        box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
     }
 
     &__title {
@@ -31,22 +23,21 @@
 
     &__form {
         form {
-            @media #{$sm} {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+
+            @media #{$md} {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
+                gap: 1.5rem;
             }
         }
     }
 
     .wrapper {
         display: grid;
-        padding-bottom: 1rem;
         grid-template-columns: 1fr;
-        gap: 1rem;
-
-        @media #{$lg} {
-            grid-template-columns: 1fr 1fr;
-        }
+        flex: 1;
     }
 
     &__row {
@@ -62,8 +53,10 @@
     &__control {
         @include form-control();
         background: $brand_gray;
-        border: none;
-        border-radius: 2.6rem;
+
+        @media #{$until_md} {
+            height: auto;
+        }
 
         &::placeholder {
             opacity: 0;
@@ -72,10 +65,11 @@
         &-wrap {
             position: relative;
             display: block;
+            flex: 1;
             width: 100%;
             margin-bottom: 1rem;
             @media #{$sm} {
-                margin-bottom: 0;
+                margin-bottom: -7rem;
             }
 
             .acfm-contact-form__row & {
@@ -122,6 +116,7 @@
 
     .selected-flag {
         z-index: 10;
+        background-color: transparent !important;
     }
 
     &__placeholder {
@@ -165,7 +160,7 @@
     //}
 
     .submit-wrapper {
-        text-align: center;
+        text-align: right;
     }
 
     &__mail {
@@ -194,7 +189,7 @@
 
     .prfw-btn-primary {
         @include button_primary();
-        padding: 2.5rem 3rem;
+        padding: 2rem 3rem;
         margin-top: 2rem;
 
         &:hover {
@@ -207,7 +202,7 @@
 
 .cf7-message {
     @media #{$md} {
-        height: 11rem;
+        height: 55%;
     }
 }
 
@@ -265,4 +260,9 @@
             }
         }
     }
+}
+
+.flip {
+    transform: scaleX(-1);
+    scale: 1.5;
 }

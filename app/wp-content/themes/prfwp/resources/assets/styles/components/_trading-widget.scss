@@ -1,9 +1,16 @@
 /* stylelint-disable */
 .acfm-trading-widget {
-    .tradingview-widget-container {
-        @include brand-shadow();
+    .tradingview-widget {
+        &-container {
+            @include brand-shadow();
 
-        width: 100%;
-        margin: 0 auto;
+            width: 100%;
+            margin: 0 auto;
+            border: 1rem solid $brand_primary;
+        }
+
+        &-copyright {
+            display: none;
+        }
     }
 }

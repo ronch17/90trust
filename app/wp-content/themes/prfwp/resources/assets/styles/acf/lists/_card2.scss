@@ -2,10 +2,12 @@
 
 .acfm-list-card2 {
     display: flex;
+    //min-width: 86rem;
     margin-bottom: 5rem;
     text-align: center;
     list-style: none;
     gap: 2.5rem;
+    transition: 0.4s ease;
 
     @media #{$until_md} {
         overflow-x: scroll;
@@ -16,7 +18,7 @@
         flex-direction: column;
         align-content: center;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         text-align: left;
         border-radius: 2rem;
         gap: 1rem;
@@ -35,22 +37,72 @@
                     fill: $brand_primary;
                 }
             }
+
+            .acfm-list-card2 {
+                //&__image {
+                //    margin-bottom: -34rem;
+                //}
+
+                &__content {
+                    width: 18%;
+                    height: 100%;
+                    max-height: 100%;
+                    box-shadow: 0 20px 30px 0 #00000026;
+
+                    @media #{$until_sm} {
+                        width: 25rem !important;
+                        transform: translate(-50%, -65%);
+                    }
+                }
+
+                &__text {
+                    display: block;
+                    height: 23rem;
+                    max-height: 23rem;
+                    transition: max-height 0.4s ease-in-out;
+                }
+            }
         }
     }
 
     &__content {
+        position: absolute;
+        bottom: 0;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 18%;
         height: 95px;
-        color: black;
-        background: white;
+        max-height: 95px;
+        color: $brand_dark;
+        text-align: center;
+        background: $brand_white;
         border-radius: 1rem;
+        box-shadow: 0 20px 30px 0 #00000026;
+        transition: 0.3s ease;
+
+        @media #{$until_lg} {
+            position: relative;
+            left: 50%;
+            z-index: 9;
+            width: 25rem;
+            transform: translate(-50%, 5%);
+        }
     }
 
     &__image {
-        margin-bottom: -10rem;
+        position: relative;
+        width: 100%;
+
+        @media #{$until_xl} {
+            margin-bottom: -10rem;
+        }
+
+        @media (#{$xl}) and (#{$until_xxl}) {
+            width: 115%;
+            height: 20vh;
+        }
     }
 
     &__title {
@@ -60,6 +112,22 @@
     }
 
     &__text {
-        font-size: 16px;
+        height: 0;
+        max-height: 0;
+        padding: 0 3rem;
+        overflow: hidden;
+        font-size: 12px;
+
+        transition: max-height 0.4s ease-in-out;
+    }
+
+    .slick {
+        &-slide {
+            height: 42rem;
+        }
+
+        &-dots {
+            top: 90%;
+        }
     }
 }

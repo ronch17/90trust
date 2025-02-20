@@ -3,6 +3,11 @@
     @include font-size-xs();
     position: relative;
     overflow: hidden;
+
+    //@media #{$xl} {
+    //    height: 200dvh;
+    //}
+
     &__title {
         padding-bottom: 0.5em;
         font-size: 30px;
@@ -33,5 +38,4 @@
             border-right: 1px solid $brand_primary;
         }
     }
-
 }

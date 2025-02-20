@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WP-Optimize – Cache, Compress images, Minify &amp; Clean database to boost page speed &amp; performance - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-12-13 01:16:26+0000\n"
+"PO-Revision-Date: 2025-02-07 02:00:29+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -63,6 +63,26 @@ msgstr "Nicht gefunden oder nicht lesbar"
 #: includes/class-wp-optimize-system-status-report.php:90
 msgid "Logs"
 msgstr "Protokolle"
+
+#: includes/class-wp-optimize-system-status-report.php:215
+#: includes/class-wp-optimize-system-status-report.php:229
+#: templates/performance/404-detector.php:70
+#: templates/performance/404-detector.php:108 wp-optimize.php:927
+msgid "Not available"
+msgstr "Nicht verfügbar"
+
+#: includes/class-wp-optimize-system-status-report.php:244
+msgid "Download logs"
+msgstr "Protokolle herunterladen"
+
+#: includes/class-wp-optimize-system-status-report.php:242
+#: includes/class-wp-optimize-system-status-report.php:258
+msgid "No log files found"
+msgstr "Es wurden keine Protokolldateien gefunden"
+
+#: includes/class-wp-optimize-system-status-report.php:99
+msgid "Plugin settings"
+msgstr "Plugin-Einstellungen"
 
 #: includes/list-tables/class-wp-optimize-queries-list-table.php:27
 #: templates/performance/404-detector.php:50
@@ -158,6 +178,10 @@ msgstr "Nginx - SSL-Zertifikat erforderlich"
 #: includes/class-wp-optimize-http-error-codes-trait.php:99
 msgid "Nginx - No Response"
 msgstr "Nginx - Keine Antwort"
+
+#: includes/class-wp-optimize-http-error-codes-trait.php:70
+msgid "Upgrade Required"
+msgstr "Upgrade erforderlich"
 
 #: wp-optimize.php:897
 msgid "Creating cache..."
@@ -637,10 +661,6 @@ msgstr "Alle Kommentare zu vorhandenen Beiträgen wurden deaktiviert um %s."
 msgid "Do not show this warning again."
 msgstr "Diese Warnung nicht noch einmal anzeigen."
 
-#: cache/class-wpo-page-cache.php:206 minify/class-wp-optimize-minify.php:106
-msgid "Cache size:"
-msgstr "Cache-Größe"
-
 #: cache/class-wpo-page-cache.php:219 cache/class-wpo-page-cache.php:222
 msgid "Purge cache for all pages"
 msgstr "Cache für alle Seiten leeren"
@@ -699,6 +719,10 @@ msgstr "(Diese Funktion erfordert %s)"
 #: optimizations/optimizetables.php:118
 msgid "Optimized table:"
 msgstr "Optimierte Tabelle:"
+
+#: cache/class-wpo-page-cache.php:206 minify/class-wp-optimize-minify.php:106
+msgid "Cache size:"
+msgstr "Cache-Größe:"
 
 #: templates/minify/js-settings-tab.php:172
 msgid "Defer jQuery"

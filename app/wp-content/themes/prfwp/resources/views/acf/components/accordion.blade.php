@@ -4,9 +4,10 @@
   @fields('accordion')
   <li class="{{$component}}-item">
 
-    @hassub('svg')
+
     <div class="{{$component}}-header">
       <div class="{{$component}}-header__content">
+        @hassub('svg')
         @include('svg.acf.' . get_sub_field('svg'))
 
       @endsub

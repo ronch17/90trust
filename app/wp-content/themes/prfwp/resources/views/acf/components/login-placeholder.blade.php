@@ -6,6 +6,12 @@ style="background: url('@sub('background')') no-repeat top center / cover"
 @endsub
 >
 <div class="{{$component}}__left {{$component}}__wrapper">
+  @hassub('image')
+  <div class="{{$component}}__image">
+    <img class="acfm-image" src="@sub('image', 'url')" alt="@sub('image', 'alt')">
+  </div>
+  @endsub
+
   @hassub('title-left')
   <div class="{{$component}}__title">@sub('title-left')</div>
   @endsub
@@ -20,6 +26,12 @@ style="background: url('@sub('background')') no-repeat top center / cover"
 </div>
 
 <div class="{{$component}}__right {{$component}}__wrapper">
+  @hassub('image')
+  <div class="{{$component}}__image">
+    <img class="acfm-image" src="@sub('image', 'url')" alt="@sub('image', 'alt')">
+  </div>
+  @endsub
+
   @hassub('title-right')
   <div class="{{$component}}__title">@sub('title-right')</div>
   @endsub

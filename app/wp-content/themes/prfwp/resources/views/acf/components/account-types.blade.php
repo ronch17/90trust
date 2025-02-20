@@ -1,101 +1,85 @@
 @set($component, 'acfm-'. App::layout())
 
-<style>
-  .acfm-account-types li[title='Lunar'] {
-    background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/cards/purple.png');
-  }
-
-   .acfm-account-types  li[title='Stellar'] {
-    background-image:url('<?php echo get_template_directory_uri(); ?>/assets/images/cards/green.png');'
-  }
-   .acfm-account-types  li[title='Celestia'] {
-    background-image:url('<?php echo get_template_directory_uri(); ?>/assets/images/cards/red.png');'
-  }
-   .acfm-account-types  li[title='Galaxy'] {
-    background-image:url('<?php echo get_template_directory_uri(); ?>/assets/images/cards/blue.png');'
-  }
-   .acfm-account-types  li[title='SuperVoid'] {
-    background-image:url('<?php echo get_template_directory_uri(); ?>/assets/images/cards/yellow.png');'
-  }
-</style>
 
 <div class="{{$component}}-wrapper">
 
+  <div class="{{$component}}__switcher-wrapper">
+    <button class="{{$component}}__switcher switcher-first-group active">{{_e('Accounts', 'sage')}}</button>
+    <button class="{{$component}}__switcher switcher-second-group">{{_e('Savings', 'sage')}}</button>
+    <button class="{{$component}}__switcher switcher-third-group">{{_e('Crypto Savings', 'sage')}}</button>
+  </div>
+
   <ul class="{{$component}}">
     @fields('account_types')
+    @set($switchGroup, get_sub_field('group_position'))
 
     @php
       $title =  get_sub_field('title') ? get_sub_field('title') : '';
-      $subtitle = get_sub_field('sub-title') ? get_sub_field('sub-title') : '';
       $titleMobile = explode(' ',(trim($title)));
-      $popular = get_sub_field('popular') ? ' popular' : '';
-      $svg = get_sub_field('svg');
+//      $switchGroup = get_sub_field('select') ?  ' second-group' : ' first-group'
     @endphp
 
     <li title="{{$titleMobile[0]}}"
-        class="{{$component}}__item {{strtolower(str_replace(' ', '-', get_sub_field('title')))}}{{$popular}}">
+        class="{{$component}}__item {{strtolower(str_replace(' ', '-', get_sub_field('title')))}} {{strtolower(str_replace(' ', '-', $switchGroup))}}">
       <div class="{{$component}}__item__container">
 
-        @hassub('popular')
-        <p class="{{$component}}__popular">
-          {{_e('Most Popular Choice', 'sage')}}
-        </p>
-        @endsub
+        <div class="{{$component}}__col {{$component}}__col-right">
 
-        @hassub('svg')
-        <div class="{{$component}}__svg">
-          @include('svg.acf.' . get_sub_field('svg'))
-        </div>
-        @endsub
-
-        @hassub('title')
-        <div class="{{$component}}__title">
-          @sub('title')
-        </div>
-        @endsub
-
-        @hassub('sub-title')
-        <div class="{{$component}}__subtitle">
-          @sub('sub-title')
-        </div>
-        @endsub
-
-        <ul class="{{$component}}__fields">
-          @fields('field')
-
-          <li class="{{$component}}__value">
-            @hassub('value')
-            @if(strtolower(get_sub_field('value')) == 'v')
-              @svg(check)
-            @elseif(strtolower(get_sub_field('value')) == 'x')
-              @svg(x)
-            @elseif(strtolower(get_sub_field('value')) == 'arr')
-              @svg(arrow)
-            @else
-              @sub('value')
-            @endif
-            @endsub
-
-            @hassub('text')
-            <h3 class="{{$component}}__text">
-              @sub('text')
-            </h3>
-            @endsub
-          </li>
+          @hassub('image')
+          <img class="@sub('image_class')"
+               src="@sub('image', 'url')"
+               alt="@sub('image', 'alt')"
+               @hassub('image_sm') class="{{$component}}--md" @endsub
+          width="@sub('new_width')"
+          height="auto">
+          @endsub()
 
 
-
-
-          @endfields
-        </ul>
-
-        <div class="{{$component}}__buttons">
-          <div class="{{$component}}__button">
-            @include('acf.sub-components.button')
+          @hassub('title')
+          <div class="{{$component}}__title">
+            @sub('title')
           </div>
+          @endsub
+
+          @hassub('sub-title')
+          <div class="{{$component}}__sub-title">
+            @sub('sub-title')
+          </div>
+          @endsub
+
+          <ul class="{{$component}}__fields">
+            @fields('field')
+
+
+            <li class="{{$component}}__field">
+              @hassub('service')
+              <h3 class="{{$component}}__service">
+                @sub('service')
+              </h3>
+              @endsub
+              @hassub('value')
+              <h3 class="{{$component}}__value">
+                @sub('value')
+              </h3>
+              @endsub
+            </li>
+
+            @endfields
+
+          </ul>
+
+
+        </div>
+
+        <div class="{{$component}}__btn-wrapper">
+          <a class="{{$component}}__btn" href="{{ home_url('/open-account')}}"
+             ng-if="!prf.customer">
+            {{_e('Open', 'sage')}} {{$title}}
+          </a>
         </div>
 
       </div>
+
 
     </li>
     @endfields

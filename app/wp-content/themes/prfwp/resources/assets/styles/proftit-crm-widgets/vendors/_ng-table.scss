@@ -20,7 +20,6 @@
         text-align: center;
         text-decoration: none;
         vertical-align: middle;
-        background-color: $brand_white;
     }
 
     > li {
@@ -37,7 +36,7 @@
 
         &.active a {
             color: $brand_white;
-            background-color: $brand_primary;
+            background: $brand_primary;
         }
 
         &.disabled a {
@@ -46,7 +45,7 @@
 
         &:not(.active):not(.disabled) a:hover {
             color: $brand_white;
-            background-color: $brand_primary;
+            background: $brand_primary;
         }
     }
 }

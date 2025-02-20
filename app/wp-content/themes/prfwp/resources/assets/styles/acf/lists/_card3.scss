@@ -1,0 +1,56 @@
+/* stylelint-disable */
+
+.acfm-list-card3 {
+    display: grid;
+    padding: 0;
+    margin-bottom: 5rem;
+    text-align: center;
+    list-style: none;
+    gap: 2.5rem;
+    grid-template-columns: 1fr;
+    @media #{$lg} {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        padding: 6.5rem 2.5rem;
+        text-align: left;
+        border: 1px solid $brand_primary;
+        border-radius: 2rem;
+        gap: 1rem;
+
+        @media #{$until_xxl} {
+            flex-direction: column;
+        }
+
+        svg {
+            min-width: 5rem;
+        }
+
+        &:hover {
+            svg {
+                & path {
+                    fill: $brand_primary;
+                }
+            }
+        }
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__image {
+        min-width: 9rem;
+    }
+
+    &__title {
+        font-family: $font_secondary;
+        font-size: 3rem;
+    }
+}

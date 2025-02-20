@@ -17,6 +17,7 @@ $builder
 	->addLayout( get_field_partial( 'components.buttons' ) )
 	->addLayout( get_field_partial( 'components.signup-widget' ) )
 	->addLayout( get_field_partial( 'components.account-types' ) )
+	->addLayout( get_field_partial( 'components.homepage-slider' ) )
 	->addLayout( get_field_partial( 'components.ng-assets' ) )
 	->addLayout( get_field_partial( 'components.calendar' ) )
 	->addLayout( get_field_partial( 'components.row' ) )
@@ -32,6 +33,7 @@ $builder
     ->addLayout( get_field_partial( 'components.planets' ) )
     ->addLayout( get_field_partial( 'layouts.cpt-tax-tabs' ) )
     ->addLayout( get_field_partial( 'components.video' ) )
+    ->addLayout( get_field_partial( 'components.meet-our-team' ) )
     ->endFlexibleContent();
 
 return $builder;

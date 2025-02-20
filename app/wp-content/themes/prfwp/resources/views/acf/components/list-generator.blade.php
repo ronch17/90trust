@@ -16,7 +16,7 @@
   <a class="enableHash {{ $customClass }}" href="@sub('url')">
     @endsub
 
-    <li class="{{$component}}__item">
+    <li class="{{$component }}__item {{ $customClass }}">
 
       @hassub('svg')
       <div class="{{$component}}__icon icon-{{str_replace('.', '-', get_sub_field('svg'))}}">

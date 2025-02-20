@@ -36,8 +36,10 @@
         }
 
         &-desktop {
-            @media #{$navbar_breakpoint} {
-                display: none;
+            @media #{$lg} {
+                .acfm-bg-image {
+                    display: none;
+                }
             }
         }
     }

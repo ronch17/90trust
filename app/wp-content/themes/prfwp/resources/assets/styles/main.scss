@@ -72,7 +72,9 @@ $base_font_size_px: 16;
 @import 'acf/lists/default';
 @import 'acf/lists/card';
 @import 'acf/lists/card2';
-@import 'acf/lists/planets';
+@import 'acf/lists/card3';
+@import 'acf/lists/card4';
+@import 'acf/lists/card5';
 
 /** ACF Components */
 @import 'acf/components/menu';
@@ -82,6 +84,7 @@ $base_font_size_px: 16;
 @import 'acf/components/calendar';
 @import 'acf/components/contact-form';
 @import 'acf/components/account-types';
+@import 'acf/components/homepage-slider';
 @import 'acf/components/signup-widget';
 @import 'acf/components/signup-inline-widget';
 @import 'acf/components/payments';
@@ -93,6 +96,7 @@ $base_font_size_px: 16;
 @import 'acf/components/infinite-slider';
 @import 'acf/components/accordion';
 @import 'acf/components/planets-account-types';
+@import 'acf/components/meet-our-team';
 
 /** ACF Components Adjustments */
 @import 'acf/adjustments/slider';

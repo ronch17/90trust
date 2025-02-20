@@ -13,12 +13,9 @@ $lottie
     ->setWidth( 25 )
     ->addChoices(
         [
-            'lotties.hero-robot' => 'Hero robot Animation',
-            'lotties.forex' => 'Forex Animation',
-            'lotties.wallet' => 'Wallet Animation',
-            'lotties.indices' => 'Indices Animation',
-            'lotties.equities' => 'Equities Animation',
-            'lotties.commodities' => 'Commodities Animation',
+            'lotties.mockup1' => 'Mockup 1 Animation',
+            'lotties.mockup2' => 'Mockup 2 Animation',
+            'lotties.coins' => 'Coins Animation',
         ]
     );
 

@@ -12,6 +12,10 @@
     align-items: center;
     justify-content: center;
   }
+
+  .page-loader .svg-Logo {
+    margin: -9rem;
+  }
 </style>
 
 <div id="page-loader" class="page-loader">

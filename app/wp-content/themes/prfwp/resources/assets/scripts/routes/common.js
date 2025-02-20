@@ -3,12 +3,9 @@ import 'slick-carousel';
 import ScrollReveal from 'scrollreveal';
 import VanillaTilt from 'vanilla-tilt';
 import Lottie from 'lottie-web';
-import forex from '../lotties-json-files/forex.json';
-import wallet from '../lotties-json-files/wallet.json';
-import commodities from '../lotties-json-files/commodities.json';
-import equities from '../lotties-json-files/equities.json';
-import indices from '../lotties-json-files/indices.json';
-import heroRobot from '../lotties-json-files/hero-robot.json';
+import mockup1 from '../lotties-json-files/mockup1.json';
+import mockup2 from '../lotties-json-files/mockup2.json';
+import Coins from '../lotties-json-files/coins.json';
 
 import Scrollbar from 'smooth-scrollbar';
 import { gsap } from 'gsap';
@@ -20,493 +17,1131 @@ export default {
     },
 
     finalize() {
-        // gsap.registerPlugin(ScrollTrigger);
-        //
-        // // // Initialize smooth scrollbar
-        // // const scrollbar = Scrollbar.init(document.querySelector('html'), {
-        // //     damping: 0.1, // Adjust smoothness here
-        // //     continuousScrolling: true,
-        // // });
-        //
-        // // // Synchronize ScrollTrigger with smooth scrollbar
-        // // scrollbar.addListener(({ offset }) => {
-        // //     ScrollTrigger.update();
-        // // });
-        //
-        // // ScrollTrigger.scrollerProxy('html', {
-        // //     scrollTop(value) {
-        // //         return arguments.length ? scrollbar.scrollTo(value, 0, 0) : scrollbar.offset.y;
-        // //     },
-        // // });
-        //
-        // let homeHero = document.querySelector('.home-hero');
-        //
-        // const heroContainer = document.querySelector('.acfm-hero__container');
-        //
-        // const fixedBg1 = document.querySelector('.fixed-bg-1');
-        //
+        const homePage = document.querySelector('.home');
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // // Initialize smooth scrollbar
+        // const scrollbar = Scrollbar.init(document.querySelector('html'), {
+        //     damping: 0.1, // Adjust smoothness here
+        //     continuousScrolling: true,
+        // });
+
+        // // Synchronize ScrollTrigger with smooth scrollbar
+        // scrollbar.addListener(({ offset }) => {
+        //     ScrollTrigger.update();
+        // });
+
+        // ScrollTrigger.scrollerProxy('html', {
+        //     scrollTop(value) {
+        //         return arguments.length ? scrollbar.scrollTo(value, 0, 0) : scrollbar.offset.y;
+        //     },
+        // });
+
+        let homeHero = document.querySelector('.home-hero');
+
+        const heroContainer = document.querySelector('.acfm-hero__container');
+
+        const fixedBg1 = document.querySelector('.fixed-bg-1');
+
         const header = document.querySelector('.prfwp-header');
-        //
-        // const textCol1 = document.querySelector('.text-col-1');
-        //
-        // const section2 = document.querySelector('.section2');
-        // const section2Container = document.querySelector('.section2 .container');
-        //
-        // const section3 = document.querySelector('.section3');
-        // const starsBg = document.querySelector('.stars-bg');
-        //
+
+        const textCol1 = document.querySelector('.text-col-1');
+
+        const section2 = document.querySelector('.section2');
+        const section2Container = document.querySelector('.section2 .container');
+
+        const section3 = document.querySelector('.section3');
+        const starsBg = document.querySelector('.stars-bg');
+
+        const section4 = document.querySelector('.section4');
+        const section4Container = document.querySelector('.section4 .container');
+
         // const leftCoin = document.querySelector('.acfm-image:has(.left-coin)');
         // const rightCoin = document.querySelector('.acfm-image:has(.right-coin)');
-        //
-        // const coins = document.querySelector('.coins');
-        //
-        // const mountains1 = document.querySelector('.mountains1');
-        // const mountains2 = document.querySelector('.mountains2');
-        // const mountains3 = document.querySelector('.mountains3');
-        // const mountains4 = document.querySelector('.mountains4');
-        //
-        // const row1 = document.querySelector('.section3 .acfm-row');
-        // const leftColFadeIn = document.querySelector('.leftColFadeIn');
-        // const rightColFadeIn = document.querySelector('.rightColFadeIn');
-        // const firstTextBlock = document.querySelectorAll('.firstTextBlock');
-        //
-        // gsap.set(coins, {
-        //     yPercent: 100,
-        // });
-        //
-        // gsap.set(heroContainer, {
-        //     position: 'fixed',
-        //     bottom: '0',
-        // });
-        //
-        // gsap.set(starsBg, {
-        //     yPercent: 100,
-        // });
-        //
-        // gsap.set(mountains4, {
-        //     yPercent: 100,
-        // });
-        //
-        // gsap.set(leftColFadeIn, {
-        //     xPercent: -100,
-        // });
-        //
-        // // gsap.set(firstTextBlock, {
-        // //     yPercent: 100,
-        // // })
-        //
-        // gsap.to(header, {
-        //     scrollTrigger: {
-        //         trigger: mountains3,
-        //         start: 'bottom center',
-        //         end: 'bottom 90%',
-        //         scrub: 2,
-        //         toggleActions: 'play none reverse none',
-        //     },
-        //     backgroundColor: 'rgba(27,28,84,0.68)',
-        //     padding: '0',
-        //     duration: 0.1,
-        // });
-        //
-        // const firstSectionTimeline = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: section2,
-        //         start: 'top bottom',
-        //         end: 'top bottom',
-        //         toggleActions: 'play none reverse none',
-        //     },
-        // });
-        //
-        // firstSectionTimeline
-        //     .to(heroContainer, {
-        //         bottom: '50%',
-        //     })
-        //     .to(
-        //         coins,
-        //         {
-        //             yPercent: -200,
-        //             duration: 1.5,
-        //         },
-        //         '<'
-        //     )
-        //     .to(
-        //         textCol1,
-        //         {
-        //             yPercent: -200,
-        //             opacity: 0,
-        //             duration: 1.5,
-        //         },
-        //         '<'
-        //     )
-        //     .to(
-        //         fixedBg1,
-        //         {
-        //             bottom: '50%',
-        //         },
-        //         '<'
-        //     )
-        //     .to(
-        //         section2Container,
-        //         {
-        //             position: 'fixed',
-        //             duration: 0.1, // Faster duration for 'position'
-        //         },
-        //         '<'
-        //     ) // Align this animation with the previous one
-        //     .to(
-        //         section2Container,
-        //         {
-        //             opacity: 1,
-        //             duration: 0.7, // Slower duration for 'bottom'
-        //             minWidth: '100%',
-        // height: '100%',
-        //         },
-        //         '<'
-        //     );
-        //
-        // const thirdSectionTimeline = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: section3,
-        //         start: 'top bottom',
-        //         end: 'top bottom',
-        //         toggleActions: 'play none reverse none',
-        //     },
-        // });
-        //
-        // thirdSectionTimeline
-        //     .to(starsBg, {
-        //         left: '0',
-        //         bottom: '0',
-        //         position: 'fixed',
-        //         yPercent: 0,
-        //         duration: 0.5,
-        //     })
-        //     .to(
-        //         fixedBg1,
-        //         {
-        //             // bottom: '100%',
-        //             yPercent: -100,
-        //             duration: 0.5,
-        //         },
-        //         '<'
-        //     )
-        //     .to(
-        //         heroContainer,
-        //         {
-        //             bottom: '100%',
-        //             opacity: 1,
-        //             duration: 0.7, // Slower duration for 'bottom'
-        //         },
-        //         '<'
-        //     )
-        //     .to(
-        //         section2Container,
-        //         {
-        //             bottom: '100%',
-        //             duration: 0.5, // Slower duration for 'bottom'
-        //         },
-        //         '<'
-        //     )
-        //     .to(
-        //         mountains4,
-        //         {
-        //             position: 'fixed',
-        //             bottom: '-10%',
-        //             yPercent: 0,
-        //             duration: 0.5,
-        //         },
-        //         '<'
-        //     )
-        //     .to(
-        //         row1,
-        //         {
-        //             position: 'fixed',
-        //             bottom: '30%',
-        //             left: '0',
-        //         },
-        //         '<'
-        //     )
-        //     .to(
-        //         leftColFadeIn,
-        //         {
-        //             xPercent: 0,
-        //         },
-        //         '<'
-        //     );
-        //
-        // const coinsTimeline = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: section2,
-        //         start: 'bottom top',
-        //         end: 'bottom 90%',
-        //         scrub: 2,
-        //         toggleActions: 'play none reverse none',
-        //     },
-        // });
-        //
-        // coinsTimeline
-        //     .to(coins, {
-        //         yPercent: 0,
-        //         scrollTrigger: {
-        //             trigger: mountains3,
-        //             start: 'bottom bottom',
-        //             end: 'bottom 90%',
-        //             scrub: 2,
-        //             toggleActions: 'play none reverse none',
-        //         },
-        //     })
-        //     .to(coins, {
-        //         yPercent: -100,
-        //     })
-        //     .to(textCol1, {
-        //         opacity: 0,
-        //     })
-        //     .to(rightCoin, {
-        //         scrollTrigger: {
-        //             trigger: mountains3,
-        //             start: 'bottom bottom',
-        //             end: 'bottom 90%',
-        //             toggleActions: 'play none reverse none',
-        //         },
-        //         bottom: '77%',
-        //         right: '23%',
-        //     })
-        //     .to(leftCoin, {
-        //         scrollTrigger: {
-        //             trigger: mountains3,
-        //             start: 'bottom bottom',
-        //             end: 'bottom 90%',
-        //             toggleActions: 'play none reverse none',
-        //         },
-        //         bottom: '60%',
-        //         left: '28%',
-        //     });
-        //
-        // const tl = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: mountains3,
-        //         start: 'bottom center',
-        //         end: 'bottom 90%',
-        //         toggleActions: 'play none reverse none',
-        //         onEnter: () => `${mountains3.classList.add('add-psuedo')}`,
-        //         onLeaveBack: () => `${mountains3.classList.remove('add-psuedo')}`,
-        //     },
-        // });
-        //
-        // tl.to(mountains3, { y: -100 })
-        //     .to(
-        //         mountains2,
-        //         {
-        //             y: -70,
-        //         },
-        //         '<'
-        //     )
-        //     .to(
-        //         mountains1,
-        //         {
-        //             y: 38,
-        //         },
-        //         '<'
-        //     )
-        //     .to(
-        //         leftCoin,
-        //         {
-        //             left: '22.5%',
-        //             bottom: '45%',
-        //             duration: 0.1,
-        //         },
-        //         '<'
-        //     )
-        //     .to(
-        //         rightCoin,
-        //         {
-        //             bottom: '60%',
-        //             right: '19.5%',
-        //             duration: 0.1,
-        //         },
-        //         '<'
-        //     );
 
-        // let acHeroSection = document.querySelector('.account-types-hero');
-        // let heroRocket = document.querySelector('.hero-rocket');
-        // const sections = document.querySelectorAll('.parallax-section');
-        // const acPage = document.querySelector('.account-types-new');
-        // const planetsNav = document.querySelector('.planets-navbar');
-        // const planetsNavItem = document.querySelectorAll('.planets-navbar ul a');
-        // const lunarSection = document.getElementById('lunar');
-        // const galaxySection = document.getElementById('galaxy');
-        // let checkClickedNav = false;
-        // let isTop = 2;
-        //
-        // function clearActiveClass() {
-        //     planetsNavItem.forEach(item => item.classList.remove('active'));
-        // }
-        //
-        // function clearVisibleClass() {
-        //     sections.forEach(item => item.classList.remove('visible'));
-        // }
-        //
-        // // enable planets navigation
-        //
-        // document.querySelectorAll('a.enableHash').forEach(anchor => {
-        //     anchor.addEventListener('click', function(e) {
-        //         e.preventDefault();
-        //         const targetId = this.getAttribute('href').substring(1);
-        //         const targetElement = document.getElementById(targetId);
-        //
-        //         console.log(targetElement.id, 'targetElement');
-        //
-        //         targetElement.style.position = 'static';
-        //
-        //         if (targetElement) {
-        //             const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-        //             console.log(targetPosition, 'targetPosition');
-        //             window.scrollTo({
-        //                 top: targetPosition - 200,
-        //                 behavior: 'smooth',
-        //             });
-        //             targetElement.style.removeProperty('position');
-        //             galaxySection.classList.remove('exitdown');
-        //         }
-        //     });
-        // });
-        //
-        // // shrink hero section when scrolling and rocket flying up
-        //
-        // window.addEventListener('scroll', function(e) {
-        //     let scrolled = window.scrollY;
-        //
-        //     if (scrolled > 0) {
-        //         acHeroSection.style.translate = '0 -80%';
-        //         planetsNav.style.top = '8%';
-        //         heroRocket.classList.add('rocket-up');
-        //
-        //         lunarSection.classList.remove('exitdown');
-        //
-        //         if (isTop) {
-        //             setTimeout(function() {
-        //                 lunarSection.scrollIntoView({
-        //                     behavior: 'smooth',
-        //                     block: 'start',
-        //                 });
-        //                 setTimeout(() => {
-        //                     isTop = false;
-        //                 }, 1000);
-        //             }, 400);
-        //         }
-        //     } else {
-        //         acHeroSection.style.translate = '0 0';
-        //         planetsNav.style.top = '0';
-        //         heroRocket.classList.remove('rocket-up');
-        //         isTop = true;
-        //     }
-        // });
-        //
-        // // Observe when an element appearing when scrolling, then run something
-        //
-        // const observerOptions = {
-        //     threshold: [0.5, 1], // Adjust this threshold as needed
-        // };
-        //
-        // const observerCallback = (entries, observer) => {
-        //     entries.forEach(entry => {
-        //         if (entry.isIntersecting) {
-        //             sections.forEach(section => section.classList.remove('visible'));
-        //             entry.target.classList.add('visible');
-        //         }
-        //     });
-        // };
-        //
-        // const observer = new IntersectionObserver(observerCallback, observerOptions);
-        //
-        // sections.forEach(section => {
-        //     observer.observe(section);
-        // });
-        //
-        // // Observer for entering the viewport
-        // const observerOptionsEnter = {
-        //     root: null,
-        //     rootMargin: '0px',
-        //     threshold: [0.5, 1],
-        // };
-        //
-        // const observerCallbackEnter = (entries, observer) => {
-        //     entries.forEach(entry => {
-        //         if (entry.isIntersecting) {
-        //             entry.target.classList.remove('exit');
-        //         }
-        //     });
-        // };
-        //
-        // const observerEnter = new IntersectionObserver(observerCallbackEnter, observerOptionsEnter);
-        //
-        // // Observer for exiting the viewport
-        // const observerOptionsExit = {
-        //     root: null,
-        //     rootMargin: '0px',
-        //     threshold: [0.5, 1],
-        // };
-        //
-        // const observerCallbackExit = (entries, observer) => {
-        //     entries.forEach(entry => {
-        //         if (!entry.isIntersecting) {
-        //             entry.target.classList.add('exit');
-        //         }
-        //     });
-        // };
-        //
-        // const observerExit = new IntersectionObserver(observerCallbackExit, observerOptionsExit);
-        //
-        // sections.forEach(section => {
-        //     observerEnter.observe(section);
-        //     observerExit.observe(section);
-        // });
-        //
-        // // exit sections
-        //
-        // const observerOptionsExit1 = {
-        //     rootMargin: '0px 0px -625px 0px',
-        //     threshold: [0.5, 1], // Adjust this threshold as needed
-        // };
-        //
-        // const observerCallbackExit1 = (entries, observer) => {
-        //     entries.forEach(entry => {
-        //         if (entry.isIntersecting && !checkClickedNav) {
-        //             sections.forEach(section => section.classList.remove('exitdown'));
-        //             entry.target.classList.add('exitdown');
-        //         }
-        //     });
-        // };
-        //
-        // const observerExit1 = new IntersectionObserver(observerCallbackExit1, observerOptionsExit1);
-        //
-        // sections.forEach(section => {
-        //     observerExit1.observe(section);
-        // });
-        //
-        // // for planets navigation
-        //
-        // const observerOptionsNav = {
-        //     threshold: [0.5, 1], // Adjust this threshold as needed
-        // };
-        //
-        // const observerCallbackNav = (entries, observer) => {
-        //     entries.forEach(entry => {
-        //         if (entry.isIntersecting) {
-        //             const activeItem = document.querySelector(`.${entry.target.id}`);
-        //             clearActiveClass();
-        //             if (activeItem) {
-        //                 activeItem.classList.add('active');
-        //             }
-        //         }
-        //     });
-        // };
-        //
-        // const observerNav = new IntersectionObserver(observerCallbackNav, observerOptionsNav);
-        //
-        // sections.forEach(section => {
-        //     observerNav.observe(section);
-        // });
+        const coins = document.querySelector('.coins');
+
+        const mountains1 = document.querySelector('.mountains1');
+        const mountains2 = document.querySelector('.mountains2');
+        const mountainsImage3 = document.querySelector('.acfm-image:has(.mountains3)');
+
+        const mountains3 = document.querySelector('.mountains3');
+        const mountains4 = document.querySelector('.mountains4');
+
+        const row1 = document.querySelector('.section3 .acfm-row');
+        const leftColFadeIn = document.querySelector('.leftColFadeIn');
+        const rightColFadeIn = document.querySelector('.rightColFadeIn');
+        const firstTextBlock = document.querySelector('.rightColFadeIn .firstTextBlock');
+        const secondTextBlock = document.querySelector('.rightColFadeIn .secondTextBlock');
+        const section3Btn = document.querySelector('.section3 .acfm-btn');
+
+        const row2 = document.querySelector('.section3 .acfm-row:has(.leftColFadeIn2)');
+        const leftColFadeIn2 = document.querySelector('.leftColFadeIn2');
+
+        const firstTextBlock2 = document.querySelector('.rightColFadeIn2 .firstTextBlock');
+        const cardList = document.querySelector('.rightColFadeIn2 .acfm-list-card');
+        const leftColFadeIn2Btn = document.querySelector('.leftColFadeIn2 .acfm-btn');
+        const row3 = document.querySelector('.acfm-row:has(.grow-title)');
+        const growTitle = document.querySelector('.grow-title');
+
+        const row4 = document.querySelector('.acfm-row:has(.acfm-list-card2)');
+        const cards2 = document.querySelector('.acfm-list-card2');
+
+        const row5 = document.querySelector('.acfm-row:has(.rightColFadeIn3)');
+
+        const leftColFadeIn3 = document.querySelector('.leftColFadeIn3');
+
+        const rightColFadeIn3 = document.querySelector('.rightColFadeIn3');
+
+        const row6 = document.querySelector('.acfm-row:has(.rightColFadeIn4)');
+
+        const rightColFadeIn4 = document.querySelector('.rightColFadeIn4');
+
+        const footer = document.querySelector('.acfm-footer-main__container');
+        const footerMain = document.querySelector('.acfm-footer-main');
+
+        const sections = document.querySelectorAll('section');
+
+        ////////// homepage parallax \\\\\\\\\
+
+        if (homePage) {
+            let mm = gsap.matchMedia();
+
+            mm.add('(min-width: 1200px)', () => {
+                gsap.set(sections, {
+                    minHeight: '300vh',
+                });
+
+                gsap.set(footerMain, {
+                    minHeight: '200dvh',
+                });
+
+                gsap.set(coins, {
+                    yPercent: 170,
+                });
+
+                gsap.set(heroContainer, {
+                    position: 'fixed',
+                    bottom: '0',
+                });
+
+                gsap.set(starsBg, {
+                    yPercent: 100,
+                });
+
+                gsap.set(mountains4, {
+                    yPercent: 100,
+                });
+
+                gsap.set(leftColFadeIn, {
+                    xPercent: -100,
+                });
+
+                gsap.set(section4, {
+                    visibility: 'hidden',
+                });
+
+                gsap.set(section4Container, {
+                    position: 'fixed',
+                });
+
+                gsap.to(header, {
+                    scrollTrigger: {
+                        trigger: mountains3,
+                        start: 'bottom center',
+                        end: 'bottom 90%',
+                        scrub: 2,
+                        toggleActions: 'play none reverse none',
+                    },
+                    backgroundColor: 'rgba(27,28,84,0.68)',
+                    padding: '0',
+                    duration: 0.1,
+                });
+
+                const firstSectionTimeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: section2,
+                        start: 'top bottom',
+                        end: 'top bottom',
+                        toggleActions: 'play none reverse none',
+                    },
+                });
+
+                firstSectionTimeline
+                    .to(heroContainer, {
+                        bottom: '50%',
+                    })
+                    .to(
+                        coins,
+                        {
+                            yPercent: -200,
+                            duration: 1.5,
+                        },
+                        '<'
+                    )
+                    .to(
+                        textCol1,
+                        {
+                            yPercent: -200,
+                            opacity: 0,
+                            duration: 1.5,
+                        },
+                        '<'
+                    )
+                    .to(
+                        fixedBg1,
+                        {
+                            bottom: '50%',
+                        },
+                        '<'
+                    )
+                    .to(
+                        section2Container,
+                        {
+                            position: 'fixed',
+                            duration: 0.1, // Faster duration for 'position'
+                        },
+                        '<'
+                    ) // Align this animation with the previous one
+                    .to(
+                        section2Container,
+                        {
+                            opacity: 1,
+                            duration: 0.7, // Slower duration for 'bottom'
+                            height: '100%',
+                        },
+                        '<'
+                    );
+
+                const thirdSectionTimeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: section3,
+                        start: 'top bottom',
+                        end: 'top bottom',
+                        toggleActions: 'play none reverse none',
+                    },
+                });
+
+                thirdSectionTimeline
+                    .to(starsBg, {
+                        left: '0',
+                        bottom: '0',
+                        position: 'fixed',
+                        yPercent: 0,
+                        duration: 0.5,
+                    })
+                    .to(
+                        mountainsImage3,
+                        {
+                            yPercent: -100,
+                        },
+                        '<'
+                    )
+                    .to(
+                        fixedBg1,
+                        {
+                            // bottom: '100%',
+                            yPercent: -100,
+                            duration: 0.5,
+                        },
+                        '<'
+                    )
+                    .to(
+                        heroContainer,
+                        {
+                            bottom: '100%',
+                            opacity: 0,
+                            duration: 0.3, // Slower duration for 'bottom'
+                        },
+                        '<'
+                    )
+                    .to(
+                        section2Container,
+                        {
+                            bottom: '100%',
+                            duration: 0.5, // Slower duration for 'bottom'
+                        },
+                        '<'
+                    )
+                    .to(
+                        mountains4,
+                        {
+                            position: 'fixed',
+                            bottom: '-70%',
+                            yPercent: 0,
+                            duration: 0.5,
+                        },
+                        '<'
+                    )
+                    .to(
+                        row1,
+                        {
+                            position: 'fixed',
+                            bottom: '0',
+                            left: '0',
+                        },
+                        '<'
+                    )
+                    .to(
+                        leftColFadeIn,
+                        {
+                            xPercent: 0,
+                        },
+                        '<'
+                    )
+                    .to(
+                        mountains3,
+                        {
+                            visibility: 'hidden',
+                        },
+                        '<'
+                    );
+
+                gsap.fromTo(
+                    firstTextBlock,
+                    { y: '90rem' }, // Initial state
+                    {
+                        y: '0', // Target state
+                        scrollTrigger: {
+                            trigger: section3,
+                            start: 'top+=1000 bottom',
+                            end: 'top+=1000 bottom',
+                            toggleActions: 'play none reverse none',
+                        },
+                    }
+                );
+
+                gsap.fromTo(
+                    secondTextBlock,
+                    { y: '70rem' }, // Initial state
+                    {
+                        y: '0', // Target state
+                        scrollTrigger: {
+                            trigger: section3,
+                            start: 'top+=1500 bottom',
+                            end: 'top+=1500 bottom',
+                            toggleActions: 'play none reverse none',
+                        },
+                    }
+                );
+
+                gsap.fromTo(
+                    section3Btn,
+                    { y: '70rem' }, // Initial state
+                    {
+                        y: '0', // Target state
+                        scrollTrigger: {
+                            trigger: section3,
+                            start: 'top+=2000 bottom',
+                            end: 'top+=2000 bottom',
+                            toggleActions: 'play none reverse none',
+                        },
+                    }
+                );
+
+                gsap.to(row1, {
+                    scrollTrigger: {
+                        trigger: section3Btn,
+                        start: 'bottom top',
+                        end: 'bottom bottom',
+                        toggleActions: 'play none reverse none',
+                    },
+                    y: '-150rem',
+                });
+
+                gsap.fromTo(
+                    firstTextBlock2,
+                    { y: '50rem' }, // Initial state
+                    {
+                        y: '0', // Target state
+                        scrollTrigger: {
+                            trigger: firstTextBlock2,
+                            start: 'bottom bottom',
+                            end: 'bottom bottom',
+                            toggleActions: 'play none reverse none',
+                        },
+                    }
+                );
+
+                gsap.fromTo(
+                    cardList,
+                    { y: '70rem' }, // Initial state
+                    {
+                        y: '0', // Target state
+                        scrollTrigger: {
+                            trigger: cardList,
+                            start: 'bottom bottom',
+                            end: 'bottom bottom',
+                            toggleActions: 'play none reverse none',
+                        },
+                    }
+                );
+
+                gsap.fromTo(
+                    leftColFadeIn2Btn,
+                    { y: '80rem' }, // Initial state
+                    {
+                        y: '0', // Target state
+                        scrollTrigger: {
+                            trigger: leftColFadeIn2Btn,
+                            start: 'clamp(bottom bottom)',
+                            end: 'clamp(bottom 20%)',
+                            toggleActions: 'play none reverse none',
+                        },
+                    }
+                );
+
+                gsap.fromTo(
+                    row2,
+                    { y: '100rem', position: 'fixed' }, // Initial state
+                    {
+                        y: '0', // Moves into view
+                        bottom: '35%',
+                        scrollTrigger: {
+                            trigger: section3Btn,
+                            start: 'bottom top',
+                            end: 'bottom bottom',
+                            toggleActions: 'play none reverse none',
+                        },
+                    }
+                );
+
+                gsap.fromTo(
+                    row2,
+                    { y: '0' }, // Assume it's in place after the first animation
+                    {
+                        y: '-100rem', // Moves out of view upwards
+                        scrollTrigger: {
+                            trigger: leftColFadeIn2Btn,
+                            start: 'bottom top',
+                            end: 'bottom bottom',
+                            toggleActions: 'play none reverse none',
+                        },
+                    }
+                );
+
+                const growTitleTl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: leftColFadeIn2Btn,
+                        start: 'bottom top',
+                        end: 'bottom bottom',
+                        toggleActions: 'play none reverse none',
+                    },
+                });
+
+                growTitleTl
+                    .fromTo(
+                        row3,
+                        { y: '100rem', left: '50%', xPercent: -50, position: 'fixed', scale: 0.1, opacity: 0 }, // Initial state
+                        {
+                            y: '0', // Target state
+                            bottom: '50%',
+                            scale: 1.5,
+                            ease: 'power2.out',
+                            opacity: 1,
+                        }
+                    )
+                    .to(growTitle, { scale: 1.5 }, '-=0.1');
+
+                const cardsTl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: row4,
+                        start: 'bottom top',
+                        end: 'bottom bottom',
+                        toggleActions: 'play none reverse none',
+                    },
+                });
+
+                cardsTl
+                    .fromTo(
+                        row4,
+                        { y: '100rem', position: 'fixed', left: '50%', xPercent: -50 }, // Initial state
+                        {
+                            y: '0',
+                            bottom: '27%',
+                        }
+                    )
+                    .to(row3, { bottom: '77%' }, '<')
+                    .to(cards2, { scale: 1.4 }, '<');
+
+                const section4tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: row4,
+                        start: 'bottom+=500 top',
+                        end: 'bottom bottom',
+                        toggleActions: 'play none reverse none',
+                    },
+                });
+
+                section4tl
+                    .to(section4, {
+                        visibility: 'visible',
+                    })
+                    .to(
+                        mountains4,
+                        {
+                            bottom: '100%',
+                        },
+                        '<'
+                    )
+                    .to(
+                        row3,
+                        {
+                            bottom: '110%',
+                        },
+                        '<'
+                    )
+                    .to(
+                        row4,
+                        {
+                            bottom: '110%',
+                        },
+                        '<'
+                    )
+                    .fromTo(
+                        section4Container,
+                        { left: '50%', xPercent: -50, opacity: 0 },
+                        {
+                            position: 'fixed',
+                            bottom: '20%',
+                            opacity: 1,
+                        },
+                        '<'
+                    )
+                    .fromTo(
+                        rightColFadeIn3,
+                        {
+                            xPercent: 200,
+                        },
+                        {
+                            xPercent: 0,
+                        },
+                        '+=0.2'
+                    );
+
+                const row5tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: row4,
+                        start: 'bottom+=2000 top',
+                        end: 'bottom bottom',
+                        toggleActions: 'play none reverse none',
+                    },
+                });
+
+                row5tl
+                    .to(rightColFadeIn3, {
+                        xPercent: -120,
+                    })
+                    .to(
+                        leftColFadeIn3,
+                        {
+                            xPercent: -150,
+                            opacity: 0,
+                        },
+                        '<'
+                    )
+                    .fromTo(
+                        row6,
+                        { yPercent: 100, position: 'fixed' },
+                        {
+                            yPercent: -100,
+                        },
+                        '<'
+                    );
+
+                const footertl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: row4,
+                        start: 'clamp(bottom+=2400 top)',
+                        end: 'bottom bottom',
+                        toggleActions: 'play none reverse none',
+                    },
+                });
+
+                footertl
+                    .fromTo(
+                        footer,
+                        {
+                            bottom: '0%',
+                            zIndex: 5,
+                            height: '45vh',
+                            left: '0',
+                            maxWidth: '100%',
+                            padding: '5rem 20rem',
+                            background: '#342d5a',
+                            position: 'absolute',
+                            yPercent: 100,
+                            opacity: '0',
+                        },
+                        {
+                            position: 'fixed',
+                            opacity: '1',
+                            yPercent: 0,
+                        }
+                    )
+                    .to(
+                        row6,
+                        {
+                            yPercent: -180,
+                        },
+                        '<'
+                    )
+                    .to(
+                        rightColFadeIn3,
+                        {
+                            yPercent: -70,
+                        },
+                        '<'
+                    );
+
+                const coinsTimeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: section2,
+                        start: 'bottom top',
+                        end: 'bottom 90%',
+                        scrub: 2,
+                        toggleActions: 'play none reverse none',
+                    },
+                });
+
+                coinsTimeline
+                    .to(coins, {
+                        yPercent: -100,
+                        ease: 'power1.inOut',
+                        duration: 1.5,
+                    })
+                    .to(textCol1, {
+                        opacity: 0,
+                    });
+
+                const mountainstl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: mountains3,
+                        start: 'top center',
+                        end: 'top center',
+                        toggleActions: 'play none reverse none',
+                    },
+                });
+
+                mountainstl
+                    .to(mountains3, { y: -100 })
+                    .to(
+                        mountains2,
+                        {
+                            y: -70,
+                        },
+                        '<'
+                    )
+                    .to(
+                        mountains1,
+                        {
+                            y: 38,
+                        },
+                        '<'
+                    )
+                    .to(
+                        coins,
+                        {
+                            yPercent: 0,
+                        },
+                        '<'
+                    );
+            });
+        }
+
+        /////////// inner pages effects \\\\\\\\\\\
+
+        const flipImg = document.querySelector('.flip');
+
+        if (flipImg) {
+            const flipImagetl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: flipImg,
+                    start: 'top bottom',
+                    end: 'top bottom',
+                    toggleActions: 'play none none none',
+                },
+            });
+
+            flipImagetl.fromTo(
+                flipImg,
+                { xPercent: -100, yPercent: 100, opacity: '0', duration: 2.5, ease: 'power2.inOut' },
+                { xPercent: 0, yPercent: 0, opacity: '1', duration: 2, ease: 'power2.inOut' }
+            );
+        }
+
+        const meetOurTeamImgs = document.querySelectorAll('.acfm-list-meet-our-team__item');
+
+        if (meetOurTeamImgs) {
+            meetOurTeamImgs.forEach(entry => {
+                let image = entry.querySelector('.acfm-image');
+
+                gsap.fromTo(
+                    image,
+                    { xPercent: -20, opacity: '0' },
+                    {
+                        xPercent: 0,
+                        opacity: '1',
+                        duration: 0.5,
+                        ease: 'power2.in',
+                        scrollTrigger: {
+                            trigger: entry,
+                            start: 'top 80%',
+                            end: 'bottom 90%',
+                            toggleActions: 'play none none none',
+                        },
+                    }
+                );
+            });
+        }
+
+        window.addEventListener('load', () => {
+            const heroTitle = document.querySelector('.acfm-hero .acfm-title');
+            const heroText = document.querySelector('.acfm-hero .acfm-text');
+
+            if (!heroTitle) return; // Prevent errors if elements are missing
+
+            const tl = gsap.timeline(); // Create a timeline
+
+            tl.fromTo(
+                heroTitle,
+                { yPercent: 100, opacity: 0 },
+                { yPercent: 0, opacity: 1, duration: 2, ease: 'power1.out' }
+            ).fromTo(
+                heroText,
+                { yPercent: 150, opacity: 0 },
+                { yPercent: 0, opacity: 1, duration: 2, ease: 'power2.out' },
+                '-=1.5' // Start heroText animation 1.5s before heroTitle finishes
+            );
+        });
+
+
+        const greenMountainsBg = document.querySelector('.green-mountains .acfm-bg-image');
+
+        gsap.fromTo(
+            greenMountainsBg,
+            { yPercent: 100, opacity: '0', overflow: 'hidden' }, // Correctly formatted "from" values
+            {
+                yPercent: 0,
+                opacity: '1',
+                duration: 2,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: greenMountainsBg,
+                    start: 'top bottom+=1200',
+                    end: 'bottom 90%',
+                    toggleActions: 'play none none none',
+                },
+            }
+        );
+
+
+        /////////// safety & trust \\\\\\\\\
+
+        const satPage = document.querySelector('.safety-and-trust');
+
+        if (satPage) {
+            let mm = gsap.matchMedia();
+            mm.add('(min-width: 1200px)', () => {
+                const satHero = document.querySelector('.sat-hero');
+                const satHeroBg = document.querySelector('.sat-hero .acfm-bg-video video');
+                const satHeroContainer = document.querySelector('.sat-hero .container');
+
+                const suicideAstro = document.querySelector('.suicide-astronaut');
+
+                const leftText = document.querySelector('.left-text');
+                const rightText = document.querySelector('.right-text');
+
+                const leftText2 = document.querySelector('.left-text2');
+                const rightText2 = document.querySelector('.right-text2');
+
+                const fixedBg = document.querySelector('.fixed-video');
+                const fixedBgContainer = document.querySelector('.acfm-video:has(.fixed-video)');
+
+                gsap.set(satHeroBg, {
+                    yPercent: -5,
+                });
+
+                ScrollTrigger.create({
+                    trigger: satHero,
+                    start: 'top top',
+                    // endTrigger: sections2,
+                    end: 'bottom top',
+                    pin: satHeroContainer,
+                    pinSpacing: false, // Prevents extra space after unpinning
+                });
+
+                ScrollTrigger.create({
+                    trigger: satHero,
+                    start: 'top top',
+                    // endTrigger: sections2,
+                    end: 'bottom top',
+                    pin: satHeroBg,
+                    pinSpacing: false, // Prevents extra space after unpinning
+                });
+
+                const satFirstSecftl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: satHero,
+                        start: 'bottom bottom',
+                        end: 'top bottom',
+                        toggleActions: 'play none reverse none',
+                    },
+                });
+
+                ScrollTrigger.create({
+                    trigger: satHero,
+                    start: 'top top',
+                    endTrigger: footerMain,
+                    end: 'bottom bottom',
+                    pin: suicideAstro,
+                    pinSpacing: false, // Prevents extra space after unpinning
+                });
+
+                satFirstSecftl
+                    .to(satHeroBg, { yPercent: -35, duration: 1.2, ease: 'power2.inOut' })
+                    .to(satHeroContainer, { yPercent: -50, duration: 1.2, ease: 'power2.inOut' }, '<')
+                    .fromTo(
+                        suicideAstro,
+                        { opacity: '0' },
+                        { yPercent: -170, opacity: '1', duration: 1.2, ease: 'power2.inOut' },
+                        '<'
+                    );
+
+                // gsap.set(leftText, {
+                //     margin: '70rem 0',
+                // })
+                //
+                // gsap.set(rightText, {
+                //     margin: '70rem 0',
+                // })
+
+                ScrollTrigger.create({
+                    trigger: leftText,
+                    start: 'center center',
+                    endTrigger: footerMain,
+                    end: 'bottom top',
+                    pin: leftText,
+                    pinSpacing: false, // Prevents extra space after unpinning
+                });
+
+                const leftTexttl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: leftText,
+                        start: 'center center',
+                        end: 'bottom 90%',
+                        toggleActions: 'play none reverse none',
+                    },
+                });
+
+                leftTexttl
+                    .fromTo(
+                        leftText,
+                        { xPercent: -70, opacity: '0' },
+                        {
+                            xPercent: 0,
+                            opacity: '1',
+                            duration: 1,
+                            ease: 'power2.in',
+                        }
+                    )
+                    .to(satHeroBg, { yPercent: -50, duration: 1.2, ease: 'power2.inOut' }, '<')
+                    .to(satHeroContainer, { yPercent: -70, duration: 1.2, ease: 'power2.inOut' }, '<');
+
+                ScrollTrigger.create({
+                    trigger: rightText,
+                    start: 'center center',
+                    endTrigger: footerMain,
+                    end: 'bottom top',
+                    pin: rightText,
+                    pinSpacing: false, // Prevents extra space after unpinning
+                });
+
+                const rightTexttl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: rightText,
+                        start: 'center center',
+                        end: 'bottom 90%',
+                        toggleActions: 'play none reverse none',
+                    },
+                });
+
+                rightTexttl
+                    .fromTo(
+                        rightText,
+                        { xPercent: 70, opacity: '0' },
+                        {
+                            xPercent: 0,
+                            opacity: '1',
+                            duration: 1,
+                            ease: 'power2.in',
+                        }
+                    )
+                    .to(satHeroBg, { yPercent: -80, duration: 1.2, ease: 'power2.inOut' }, '<')
+                    .to(satHeroContainer, { yPercent: -100, duration: 1.2, ease: 'power2.inOut' }, '<')
+                    .to(leftText, { yPercent: -120, duration: 1.2, ease: 'power2.inOut' }, '<');
+
+                ScrollTrigger.create({
+                    trigger: leftText2,
+                    start: 'center center',
+                    endTrigger: footerMain,
+                    end: 'bottom top',
+                    pin: leftText2,
+                    pinSpacing: false, // Prevents extra space after unpinning
+                });
+
+                const leftTexttl2 = gsap.timeline({
+                    scrollTrigger: {
+                        // Added missing comma before scrollTrigger
+                        trigger: leftText2,
+                        start: 'center center',
+                        end: 'bottom 90%',
+                        toggleActions: 'play none reverse none',
+                    },
+                });
+
+                leftTexttl2
+                    .to(rightText, {
+                        yPercent: -90,
+                        duration: 1,
+                        ease: 'power2.in',
+                    })
+                    .to(leftText, { yPercent: -240, opacity: '0', duration: 1.2, ease: 'power2.inOut' }, '<')
+                    .fromTo(
+                        leftText2,
+                        { xPercent: -70, opacity: 0 }, // Fixed object syntax
+                        {
+                            xPercent: 0,
+                            opacity: 1,
+                            duration: 1,
+                            ease: 'power2.in',
+                        },
+                        '<'
+                    )
+                    .to(
+                        fixedBg,
+                        {
+                            yPercent: 50,
+                            duration: 1,
+                            ease: 'power2.in',
+                        },
+                        '<'
+                    );
+
+                ScrollTrigger.create({
+                    trigger: rightText2,
+                    start: 'center center',
+                    endTrigger: footerMain,
+                    end: 'bottom top',
+                    pin: rightText2,
+                    pinSpacing: false, // Prevents extra space after unpinning
+                });
+
+                const rightTexttl2 = gsap.timeline({
+                    scrollTrigger: {
+                        // Added missing comma before scrollTrigger
+                        trigger: rightText2,
+                        start: 'center center',
+                        end: 'bottom 90%',
+                        toggleActions: 'play none reverse none',
+                    },
+                });
+
+                rightTexttl2
+                    .to(leftText2, {
+                        yPercent: -90,
+                        duration: 1,
+                        ease: 'power2.in',
+                    })
+                    .to(
+                        rightText,
+                        {
+                            yPercent: -190,
+                            opacity: '0',
+                            duration: 1,
+                            ease: 'power2.in',
+                        },
+                        '<'
+                    )
+                    .fromTo(
+                        rightText2,
+                        { xPercent: 70, opacity: 0 }, // Fixed object syntax
+                        {
+                            xPercent: 0,
+                            opacity: 1,
+                            duration: 1,
+                            ease: 'power2.in',
+                        },
+                        '<'
+                    )
+                    .to(
+                        fixedBg,
+                        {
+                            yPercent: 20,
+                            duration: 1,
+                            ease: 'power2.in',
+                        },
+                        '<'
+                    );
+
+                gsap.set(fixedBg, {
+                    position: 'fixed',
+                    left: 0,
+                    zIndex: -1,
+                    width: '100%',
+                    yPercent: 100,
+                    top: 0,
+                });
+                gsap.set(fixedBgContainer, {
+                    height: '10vh',
+                });
+
+                const footertl = gsap.timeline({
+                    scrollTrigger: {
+                        // Added missing comma before scrollTrigger
+                        trigger: footerMain,
+                        markers: true,
+                        start: 'top bottom',
+                        end: 'top bottom',
+                        toggleActions: 'play none reverse none',
+                    },
+                });
+
+                // ScrollTrigger.create({
+                //     trigger: footerMain,
+                //     start: 'center bottom',
+                //     end: 'bottom bottom',
+                //     pin: footerMain,
+                //     pinSpacing: false, // Prevents extra space after unpinning
+                //     markers: true, // Remove in production
+                // });
+
+                footertl
+                    .to(
+                        fixedBg,
+                        {
+                            yPercent: 0,
+                            duration: 1,
+                            ease: 'power2.in',
+                        },
+                        '<'
+                    )
+                    .fromTo(
+                        footerMain,
+                        {
+                            zIndex: '1',
+                            visibility: 'hidden',
+                            width: '100%',
+                            yPercent: 100,
+                            bottom: '0',
+                            ease: 'power2.in',
+                        },
+                        {
+                            yPercent: 0,
+                            duration: 1,
+                            visibility: 'visible',
+                            position: 'fixed',
+                        },
+                        '<'
+                    )
+                    .to(
+                        leftText2,
+                        {
+                            yPercent: -300,
+                            duration: 1,
+                            ease: 'power2.in',
+                        },
+                        '<'
+                    )
+                    .to(
+                        rightText2,
+                        {
+                            yPercent: -390,
+                            duration: 1,
+                            ease: 'power2.in',
+                        },
+                        '<'
+                    )
+                    .to(
+                        suicideAstro,
+                        {
+                            yPercent: -350,
+                            duration: 1,
+                            ease: 'power2.in',
+                        },
+                        '<'
+                    );
+            });
+        }
+
+        // gsap.to(suicideAstro, {
+        //     scrollTrigger: {
+        //         trigger: satHero,
+        //         start: 'bottom bottom',
+        //         end: 'top bottom',
+        //         toggleActions: 'play none reverse none',
+        //     },
+        // })
+
+        // meet our team modal
+
+        let modal = document.querySelectorAll('.acfm-list-meet-our-team__backdrop');
+        let modalComp = document.querySelectorAll('.acfm-list-meet-our-team__modal');
+        let modalBtns = document.querySelectorAll('.acfm-list-meet-our-team__button');
+        let cards = document.querySelectorAll('.acfm-list-meet-our-team__item');
+        const closeBtns = document.querySelectorAll('.close-btn');
+        const xBtn = document.querySelectorAll('.svg-x');
+
+        modal.forEach((item, i) => {
+            item.addEventListener('click', e => {
+                if (!modalComp[i].contains(e.target)) {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        if (modal) {
+            cards.forEach((card, i) => {
+                const modalBtn = modalBtns[i];
+
+                modalBtn.id = i;
+
+                card.setAttribute('data-card-id', modalBtn.id);
+            });
+
+            modalBtns.forEach(button => {
+                button.addEventListener('click', function() {
+                    const buttonId = this.id;
+
+                    const modal = document.querySelector(
+                        `[data-card-id="${buttonId}"] .acfm-list-meet-our-team__backdrop`
+                    );
+
+                    if (modal) {
+                        modal.style.display = 'flex';
+                    }
+                });
+            });
+
+            closeBtns.forEach(button => {
+                button.addEventListener('click', function() {
+                    const modal = this.closest('.acfm-list-meet-our-team__backdrop');
+                    if (modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            });
+
+            xBtn.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const modal = this.closest('.acfm-list-meet-our-team__backdrop');
+                    if (modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            });
+        }
 
         // tilt js
 
@@ -544,33 +1179,18 @@ export default {
         // lottie
 
         Lottie.loadAnimation({
-            container: document.getElementById('hero-robot'),
-            animationData: heroRobot,
+            container: document.getElementById('mockup1'),
+            animationData: mockup1,
         });
 
         Lottie.loadAnimation({
-            container: document.getElementById('forex'),
-            animationData: forex,
+            container: document.getElementById('mockup2'),
+            animationData: mockup2,
         });
 
         Lottie.loadAnimation({
-            container: document.getElementById('wallet'),
-            animationData: wallet,
-        });
-
-        Lottie.loadAnimation({
-            container: document.getElementById('equities'),
-            animationData: equities,
-        });
-
-        Lottie.loadAnimation({
-            container: document.getElementById('commodities'),
-            animationData: commodities,
-        });
-
-        Lottie.loadAnimation({
-            container: document.getElementById('indices'),
-            animationData: indices,
+            container: document.getElementById('coins'),
+            animationData: Coins,
         });
 
         // Add toggle-sub-menu button to main navigation links with children
@@ -635,7 +1255,7 @@ export default {
         }
 
         // Open Account Switcher
-        const $placeholderBody = $('#open_account_placeholder'),
+        const $placeholderBody = $('.acfm-login-placeholder'),
             $placeholderLeft = $('.acfm-login-placeholder__left'),
             $placeholderRight = $('.acfm-login-placeholder__right'),
             $placeholderBtn = $('.acfm-login-placeholder__button');
@@ -724,24 +1344,172 @@ export default {
             });
         });
 
-        /* account types slider */
-        const $accountTypes = $('.acfm-account-types');
+        // Slick Slider initialize
+        /* global main */
+        $('.acfm-slider').slick({
+            rtl: !!main.rtl,
+            dots: true,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 6000,
+            pauseOnHover: false,
+            arrows: false,
+            speed: 1300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+
+        /* Slider FullWidth */
+        $('.acfm-slider-testimonials').slick({
+            rtl: !!main.rtl,
+            dots: true,
+            infinite: true,
+            autoplay: false,
+            autoplaySpeed: 6000,
+            pauseOnHover: false,
+            arrows: false,
+            speed: 1300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            mobileFirst: true,
+            responsive: [
+                {
+                    breakpoint: 576,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                    },
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2,
+                        arrows: false,
+                        dots: true,
+                    },
+                },
+            ],
+        });
+
+        const $accountTypes = $('.acfm-homepage-slider');
+
+        // Initialize slick carousel
         $accountTypes.slick({
+            rtl: !!main.rtl,
+            arrows: false,
+            dots: true,
+            customPaging: function(slider, i) {
+                let slideTitle = $(slider.$slides[i])
+                    .find('li')
+                    .attr('title');
+                let slidePrice = $(slider.$slides[i])
+                    .find('.acfm-homepage-slider__price')
+                    .text() // jQuery's text() method fetches the text content of an element
+                    .trim(); // Trim the text to remove whitespace
+                return '<button class="tab tab-title">' + slideTitle + '</button>';
+            },
+            infinite: true,
+            autoplay: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '',
+            mobileFirst: true,
+            adaptiveHeight: true,
+            fade: true,
+            cssEase: 'linear',
+        });
+
+        // Wait for the DOM to be ready, then insert the progress bar
+        setTimeout(() => {
+            const slickDots = document.querySelector('.acfm-homepage-slider .slick-dots');
+
+            // Create the progress container as a DOM element
+            const progressContainer = document.createElement('div');
+            progressContainer.className = 'progress-container';
+            progressContainer.innerHTML = `
+    <div class="progress-row">
+        <div class="progress-bar"></div>
+</div>
+`;
+
+            // Insert the progress container inside slickDots
+            slickDots.appendChild(progressContainer);
+
+            // Now initialize jQuery reference for progress bar after it has been added
+            const $progressBar = $('.progress-bar');
+
+            // Listen to the slide change event
+            $accountTypes.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+                const totalSlides = slick.$slides.length;
+
+                // Calculate progress percentage based on the next slide index
+                const progressPercentage = nextSlide === 0 ? 0 : (nextSlide / (totalSlides - 1)) * 100;
+
+                $progressBar.css('width', progressPercentage + '%');
+            });
+        }, 100);
+
+        const acWrapper = document.querySelector('.acfm-homepage-slider-wrapper');
+        const accSwitcher = document.querySelectorAll('.acfm-homepage-slider__switcher');
+        const allListItems = document.querySelectorAll('.acfm-homepage-slider__item');
+
+        const tabsFunction = e => {
+            const clicked = e.target.closest('.acfm-homepage-slider__switcher');
+
+            let currentClass = clicked.classList[1];
+            let modifiedClass = currentClass.replace('switcher-', '');
+
+            if (!clicked) return;
+            console.log(clicked);
+            console.log(modifiedClass);
+            accSwitcher.forEach(t => t.classList.remove('active'));
+
+            clicked.classList.add('active');
+
+            let listItems = document.querySelectorAll(`.${modifiedClass}`);
+
+            allListItems.forEach(t => (t.style.display = 'none'));
+
+            listItems.forEach(item => (item.style.display = 'block'));
+        };
+
+        if (acWrapper) {
+            acWrapper.addEventListener('click', function(e) {
+                tabsFunction(e);
+            });
+        }
+
+        /* Slider Gradient */
+        $('.acfm-list-card2').slick({
+            rtl: !!main.rtl,
+            dots: true,
+            infinite: true,
+            autoplay: false,
+            autoplaySpeed: 6000,
+            pauseOnHover: false,
+            arrows: false,
+            speed: 1300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            mobileFirst: true,
+            responsive: [
+                {
+                    breakpoint: 1000,
+                    settings: 'unslick',
+                },
+            ],
+        });
+
+        $('.acfm-account-types').slick({
+            rtl: !!main.rtl,
             arrows: false,
             dots: true,
             customPaging: function(slider, i) {
                 let $slideTitle = $(slider.$slides[i])
                     .find('li')
                     .attr('title');
-                return (
-                    '<img class="acfm-image" src="https://90trust.com/wp-content/uploads/2024/07/' +
-                    $slideTitle +
-                    '.png" alt="' +
-                    $slideTitle +
-                    '"><button class="tab tab-title">' +
-                    $slideTitle +
-                    '</button>'
-                );
+                return '<button class="tab tab-title">' + $slideTitle + '</button>';
             },
             infinite: true,
             autoplay: false,
@@ -759,47 +1527,6 @@ export default {
             ],
         });
 
-        // // tabs click logic
-
-        let tabsBtn = document.getElementById('tabs');
-
-        if (tabsBtn) {
-            tabsBtn.addEventListener('click', function(event) {
-                if (event.target.classList.contains('main-tab')) {
-                    let tabId = event.target.getAttribute('data-tab');
-
-                    // Hide all tab content
-                    document.querySelectorAll('.tab-content').forEach(content => {
-                        content.classList.remove('active');
-                    });
-
-                    // Deactivate all tabs
-                    document.querySelectorAll('.main-tab').forEach(tab => {
-                        tab.classList.remove('active');
-                    });
-
-                    // Show the selected tab content
-                    document.getElementById(tabId).classList.add('active');
-
-                    // Activate the selected tab
-                    event.target.classList.add('active');
-                }
-            });
-        }
-
-        // run once when page loaded
-        function onPageLoad() {
-            let winterTabElement = document.querySelector('.tab1');
-            let winterImg = document.getElementById('tab1');
-
-            if (winterTabElement || winterImg) {
-                winterTabElement.classList.add('active');
-                winterImg.classList.add('active');
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', onPageLoad());
-
         document.querySelectorAll('.splide__arrow').forEach(el =>
             el.addEventListener('click', function() {
                 let circleElement = document.querySelector('.splide__slide');
@@ -815,7 +1542,6 @@ export default {
         // Function to check if the current slug matches any in the list
         const slugsToCheck = [
             '/deposit/',
-            '/questionnaire/',
             '/personal-info/',
             '/account-summary/',
             '/transactions/',
@@ -823,6 +1549,7 @@ export default {
             '/documents-kyc/',
             '/refer-a-friend/',
             '/intrenal-transfer/',
+            '/questionnaire/',
         ];
 
         const navbar = document.getElementById('menu-primary');
@@ -838,12 +1565,12 @@ export default {
                     header.style.display = 'none';
                     return; // exit the loop once a match is found
                 } else if (currentSlug.endsWith('/open-account/')) {
-                    header.style.backgroundColor = '#342d5a';
+                    header.style.backgroundColor = '#fff';
                 }
             }
         }
 
-        checkCurrentSlug();
+        // checkCurrentSlug();
 
         // scroll reveal
         function revealFunction() {
@@ -919,7 +1646,7 @@ export default {
             ScrollReveal().reveal('.fade-left-col', {
                 origin: 'left',
                 duration: 1300,
-                distance: '100%',
+                distance: '50px',
                 easing: 'ease-in-out',
                 reset: false,
             });
@@ -968,43 +1695,6 @@ export default {
                 easing: 'ease-in-out',
                 reset: false,
             });
-
-            // ScrollReveal().reveal('.acfm-list-default-white-bg__item:nth-child(1)', {
-            //     origin: 'bottom',
-            //     duration: 800,
-            //     distance: '100%',
-            //     easing: 'ease-in-out',
-            //     reset: false,
-            // });
-            // ScrollReveal().reveal('.acfm-list-default-white-bg__item:nth-child(2)', {
-            //     origin: 'bottom',
-            //     duration: 900,
-            //     distance: '100%',
-            //     easing: 'ease-in-out',
-            //     reset: false,
-            // });
-            // ScrollReveal().reveal('.acfm-list-default-white-bg__item:nth-child(3)', {
-            //     origin: 'bottom',
-            //     duration: 1000,
-            //     distance: '100%',
-            //     easing: 'ease-in-out',
-            //     reset: false,
-            // });
-            // ScrollReveal().reveal('.acfm-list-default-white-bg__item:nth-child(4)', {
-            //     origin: 'bottom',
-            //     duration: 1100,
-            //     distance: '100%',
-            //     easing: 'ease-in-out',
-            //     reset: false,
-            // });
-
-            // ScrollReveal().reveal('.acfm-list-default__item', {
-            //     origin: 'bottom',
-            //     duration: 1200,
-            //     distance: '100%',
-            //     easing: 'ease-in-out',
-            //     reset: false,
-            // });
 
             ScrollReveal().reveal('.grow-img', {
                 delay: 200, // Delay before the animation starts in milliseconds
