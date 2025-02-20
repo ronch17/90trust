@@ -109,6 +109,10 @@
         font-family: $font_secondary;
         font-size: 3rem;
         color: $brand_dark;
+
+        @media #{$until_xxl} {
+            font-size: 2rem;
+        }
     }
 
     &__text {
@@ -119,6 +123,11 @@
         font-size: 12px;
 
         transition: max-height 0.4s ease-in-out;
+
+        @media #{$until_xxl} {
+            font-size: 8px;
+            padding: 0;
+        }
     }
 
     .slick {

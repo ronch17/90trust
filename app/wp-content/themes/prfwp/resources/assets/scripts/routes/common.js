@@ -204,12 +204,14 @@ export default {
                         },
                         '<'
                     ) // Align this animation with the previous one
-                    .to(
+                    .fromTo(
                         section2Container,
+                        {  bottom: '0', yPercent: 110},
                         {
                             opacity: 1,
                             duration: 0.7, // Slower duration for 'bottom'
                             height: '100%',
+                            yPercent: 50,
                         },
                         '<'
                     );
@@ -220,7 +222,6 @@ export default {
                         start: 'top bottom',
                         end: 'top bottom',
                         toggleActions: 'play none reverse none',
-                        scrub: 1,
                     },
                 });
 
@@ -269,8 +270,8 @@ export default {
                         mountains4,
                         {
                             position: 'fixed',
-                            bottom: '-70%',
-                            yPercent: 0,
+                            bottom: '0',
+                            yPercent: 70,
                             duration: 0.5,
                         },
                         '<'
@@ -460,7 +461,8 @@ export default {
                         { y: '100rem', position: 'fixed', left: '50%', xPercent: -50 }, // Initial state
                         {
                             y: '0',
-                            bottom: '27%',
+                            bottom: '0',
+                            yPercent: -75,
                         }
                     )
                     .to(row3, { bottom: '77%' }, '<')
@@ -482,7 +484,7 @@ export default {
                     .to(
                         mountains4,
                         {
-                            bottom: '100%',
+                            yPercent: -100,
                         },
                         '<'
                     )
@@ -496,7 +498,7 @@ export default {
                     .to(
                         row4,
                         {
-                            bottom: '110%',
+                            yPercent: -350,
                         },
                         '<'
                     )
@@ -505,7 +507,8 @@ export default {
                         { left: '50%', xPercent: -50, opacity: 0 },
                         {
                             position: 'fixed',
-                            bottom: '20%',
+                            bottom: '0',
+                            yPercent: -40,
                             opacity: 1,
                         },
                         '<'
