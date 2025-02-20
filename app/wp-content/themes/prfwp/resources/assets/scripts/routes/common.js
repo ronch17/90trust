@@ -571,7 +571,7 @@ export default {
                         {
                             bottom: '0%',
                             zIndex: 5,
-                            height: '45vh',
+                            height: '55vh',
                             left: '0',
                             minWidth: '100%',
                             maxWidth: '100%',
