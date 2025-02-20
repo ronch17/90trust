@@ -629,3 +629,5 @@
 [2025-02-20 09:48:16 : INFO] - Cache for URL: http://90trust.test/our-platform/ has been purged, triggered by action: save_post 
 [2025-02-20 09:53:27 : INFO] - Cache for associated Polylang translation posts for Title: "Support" have been purged 
 [2025-02-20 09:53:27 : INFO] - Cache for URL: http://90trust.test/support/ has been purged, triggered by action: save_post 
+[2025-02-20 13:29:47 : INFO] - Cache for associated Polylang translation posts for Title: "Home" have been purged 
+[2025-02-20 13:29:47 : INFO] - Cache for URL: http://90trust.test/ has been purged, triggered by action: save_post 
