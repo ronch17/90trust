@@ -567,6 +567,7 @@ export default {
                             zIndex: 5,
                             height: '45vh',
                             left: '0',
+                            minWidth: '100%',
                             maxWidth: '100%',
                             padding: '5rem 20rem',
                             background: '#342d5a',
