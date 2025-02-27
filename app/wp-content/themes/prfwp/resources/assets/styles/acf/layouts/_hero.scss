@@ -40,7 +40,7 @@ $shadows-big: multiple-box-shadow(100);
     }
 
     @media #{$until_xl} {
-        height: 60vh !important;
+        height: 75vh !important;
         margin-bottom: 0 !important;
     }
 
@@ -230,8 +230,8 @@ $shadows-big: multiple-box-shadow(100);
     }
 
     @media #{$until_lg} {
-        height: 57vh;
-        margin-bottom: -20rem;
+        height: 75vh;
+        margin-bottom: -15rem;
     }
 
     &.acfm-z-index--minus {

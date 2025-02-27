@@ -94,8 +94,10 @@
         }
 
         &-left {
-            padding: 3rem 0;
-            margin-top: 4rem;
+            @media #{$xl} {
+                padding: 3rem 0;
+            }
+            margin-top: 5rem;
             border-radius: 5rem;
         }
     }
@@ -134,20 +136,23 @@
 
         @media #{$until_md} {
             width: 50rem;
-            min-height: 33rem;
+            min-height: 22rem;
         }
     }
 
     &__title {
-        @include responsive-font(80);
         position: relative;
         display: flex;
         flex-direction: column;
         padding-bottom: 1rem;
         font-family: $font_secondary;
+        font-size: 4rem;
         font-weight: $font_weight_bold;
         line-height: 1.2;
         color: $brand_white;
+        @media #{$xl} {
+            @include responsive-font(80);
+        }
 
         .popular & {
             color: $brand_primary;
@@ -161,7 +166,7 @@
     &__fields {
         width: 100%;
         padding: 0;
-        margin: 4rem 0;
+        margin: 5rem 0;
         text-align: left;
         list-style: none;
     }

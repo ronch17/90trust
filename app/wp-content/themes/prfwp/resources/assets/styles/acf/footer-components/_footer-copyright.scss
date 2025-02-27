@@ -1,9 +1,13 @@
 // stylelint-disable
 .acfm-footer-copyright {
     position: relative;
-    padding-top: 9rem;
+    padding-top: 3rem;
     font-size: 1.6rem;
     @media #{$md} {
         text-align: left;
     }
+}
+
+.acfm-row:has(.acfm-footer-copyright) {
+    padding-top: 4rem;
 }

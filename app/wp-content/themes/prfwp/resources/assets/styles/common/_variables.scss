@@ -30,7 +30,7 @@ $brand_shadow: 0 0 40px 0 rgba(0, 0, 0, 0.05);
 
 /** Header colors */
 $header_initial_background: transparent;
-$header_sticky_background: transparent;
+$header_sticky_background: $brand_bg;
 $header_link_color: $brand_white;
 
 /** LoginPopup  */

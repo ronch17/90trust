@@ -1,5 +1,19 @@
 /* stylelint-disable */
 
+$anim-duration: 2.5; // in seconds
+$anim-speed: 0.65; // in seconds
+
+:root {
+    --btn-border: 1px solid rgba(255, 255, 255, 0.2);
+    --btn-bg: transparent; // #333
+    --btn-shadow: 1px 1px 25px 10px rgba(255, 255, 255, 0.5);
+    --btn-text-color: #f4f4f4;
+    --shine-degree: 120deg;
+    --shine-color: rgba(255, 255, 255, 0.2);
+    --shine-effect: linear-gradient(var(--shine-degree), transparent, var(--shine-color), transparent);
+    --shine-transition: all #{$anim-speed}s ease-in-out;
+}
+
 .prfwp-loginWidget {
     &__depositBtn,
     &__logoutBtn,
@@ -35,6 +49,31 @@
             color: $brand_white;
             background: $brand_hover;
             border: 2px solid $brand_primary;
+        }
+    }
+
+    &__signUpBtn-lg {
+        &::before,
+        &::after {
+            position: absolute;
+            top: 0;
+            display: block;
+            height: 100%;
+            content: '';
+        }
+        &::before {
+            left: 0;
+            width: 60px;
+            background: rgb(255, 255, 255);
+            filter: blur(20px);
+            animation: shine-alt1 #{$anim-duration}s ease-in-out infinite;
+        }
+        &::after {
+            left: 30px;
+            width: 30px;
+            background: rgba(255, 255, 255, 0.6);
+            filter: blur(5px);
+            animation: shine-alt2 #{$anim-duration}s ease-in-out infinite;
         }
     }
 
@@ -87,5 +126,33 @@
                 display: none;
             }
         }
+    }
+}
+
+@keyframes shine-alt1 {
+    0% {
+        opacity: 0.5;
+        transition-property: opacity, transform;
+        transform: translateX(-100px) skewX(-15deg);
+    }
+    #{($anim-speed / ($anim-duration + $anim-speed) * 100%)},
+    100% {
+        opacity: 0.6;
+        transition-property: opacity, transform;
+        transform: translateX(300px) skewX(-15deg);
+    }
+}
+
+@keyframes shine-alt2 {
+    0% {
+        opacity: 0;
+        transition-property: opacity, transform;
+        transform: translateX(-100px) skewX(-15deg);
+    }
+    #{($anim-speed / ($anim-duration + $anim-speed) * 100%)},
+    100% {
+        opacity: 1;
+        transition-property: opacity, transform;
+        transform: translateX(300px) skewX(-15deg);
     }
 }

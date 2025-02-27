@@ -110,7 +110,12 @@ export default {
 
             mm.add('(min-width: 1200px)', () => {
                 gsap.set(sections, {
-                    minHeight: '300vh',
+                    minHeight: '280vh',
+                });
+
+                gsap.set(leftColFadeIn2, {
+                    xPercent: 10,
+                    textAlign: 'center',
                 });
 
                 gsap.set(footerMain, {
@@ -162,8 +167,8 @@ export default {
                 const firstSectionTimeline = gsap.timeline({
                     scrollTrigger: {
                         trigger: section2,
-                        start: 'top bottom',
-                        end: 'top bottom',
+                        start: 'top-=500 bottom',
+                        end: 'top-=500 bottom',
                         toggleActions: 'play none reverse none',
                     },
                 });
@@ -219,8 +224,8 @@ export default {
                 const thirdSectionTimeline = gsap.timeline({
                     scrollTrigger: {
                         trigger: section3,
-                        start: 'top bottom',
-                        end: 'top bottom',
+                        start: 'top-=2300 bottom',
+                        end: 'top-=2300 bottom',
                         toggleActions: 'play none reverse none',
                     },
                 });
@@ -300,53 +305,68 @@ export default {
                         '<'
                     );
 
-                gsap.fromTo(
-                    firstTextBlock,
-                    { y: '90rem' }, // Initial state
-                    {
-                        y: '0', // Target state
-                        scrollTrigger: {
-                            trigger: section3,
-                            start: 'top+=1000 bottom',
-                            end: 'top+=1000 bottom',
-                            toggleActions: 'play none reverse none',
-                        },
-                    }
-                );
+                // Text steps one by one
 
-                gsap.fromTo(
-                    secondTextBlock,
-                    { y: '70rem' }, // Initial state
-                    {
-                        y: '0', // Target state
-                        scrollTrigger: {
-                            trigger: section3,
-                            start: 'top+=1500 bottom',
-                            end: 'top+=1500 bottom',
-                            toggleActions: 'play none reverse none',
-                        },
-                    }
-                );
-
-                gsap.fromTo(
-                    section3Btn,
-                    { y: '70rem' }, // Initial state
-                    {
-                        y: '0', // Target state
-                        scrollTrigger: {
-                            trigger: section3,
-                            start: 'top+=2000 bottom',
-                            end: 'top+=2000 bottom',
-                            toggleActions: 'play none reverse none',
-                        },
-                    }
-                );
+                // gsap.fromTo(
+                //     firstTextBlock,
+                //     { y: '90rem' }, // Initial state
+                //     {
+                //         y: '0', // Target state
+                //         scrollTrigger: {
+                //             trigger: section3,
+                //             start: 'top+=1000 bottom',
+                //             end: 'top+=1000 bottom',
+                //             toggleActions: 'play none reverse none',
+                //         },
+                //     }
+                // );
+                //
+                // gsap.fromTo(
+                //     secondTextBlock,
+                //     { y: '70rem' }, // Initial state
+                //     {
+                //         y: '0', // Target state
+                //         scrollTrigger: {
+                //             trigger: section3,
+                //             start: 'top+=1500 bottom',
+                //             end: 'top+=1500 bottom',
+                //             toggleActions: 'play none reverse none',
+                //         },
+                //     }
+                // );
+                //
+                // gsap.fromTo(
+                //     section3Btn,
+                //     { y: '70rem' }, // Initial state
+                //     {
+                //         y: '0', // Target state
+                //         scrollTrigger: {
+                //             trigger: section3,
+                //             start: 'top+=2000 bottom',
+                //             end: 'top+=2000 bottom',
+                //             toggleActions: 'play none reverse none',
+                //         },
+                //     }
+                // );
+                //
+                // gsap.fromTo(rightColFadeIn,
+                //         { yPercent: 100, opacity: '0' }, // Initial state
+                //         {
+                //             yPercent: 0,
+                //             opacity: '1',
+                //             scrollTrigger: {
+                //                 trigger: section3,
+                //                 start: 'top-=2000  bottom',
+                //                 end: 'top-=2000  bottom',
+                //                 toggleActions: 'play none reverse none',
+                //             },
+                // } )
 
                 gsap.to(row1, {
                     scrollTrigger: {
-                        trigger: section3Btn,
-                        start: 'bottom top',
-                        end: 'bottom bottom',
+                        trigger: section3,
+                        start: 'top-=1000  bottom',
+                        end: 'top-=1000  bottom',
                         toggleActions: 'play none reverse none',
                     },
                     y: '-150rem',
@@ -358,52 +378,52 @@ export default {
                     {
                         y: '0', // Target state
                         scrollTrigger: {
-                            trigger: firstTextBlock2,
-                            start: 'bottom bottom',
-                            end: 'bottom bottom',
+                            trigger: section3,
+                            start: 'top-=1000  bottom',
+                            end: 'top-=1000  bottom',
                             toggleActions: 'play none reverse none',
                         },
                     }
                 );
 
-                gsap.fromTo(
-                    cardList,
-                    { y: '70rem' }, // Initial state
-                    {
-                        y: '0', // Target state
-                        scrollTrigger: {
-                            trigger: cardList,
-                            start: 'bottom bottom',
-                            end: 'bottom bottom',
-                            toggleActions: 'play none reverse none',
-                        },
-                    }
-                );
+                // gsap.fromTo(
+                //     cardList,
+                //     { y: '70rem' }, // Initial state
+                //     {
+                //         y: '0', // Target state
+                //         scrollTrigger: {
+                //             trigger: cardList,
+                //             start: 'bottom bottom',
+                //             end: 'bottom bottom',
+                //             toggleActions: 'play none reverse none',
+                //         },
+                //     }
+                // );
 
-                gsap.fromTo(
-                    leftColFadeIn2Btn,
-                    { y: '80rem' }, // Initial state
-                    {
-                        y: '0', // Target state
-                        scrollTrigger: {
-                            trigger: leftColFadeIn2Btn,
-                            start: 'clamp(bottom bottom)',
-                            end: 'clamp(bottom 20%)',
-                            toggleActions: 'play none reverse none',
-                        },
-                    }
-                );
+                // gsap.fromTo(
+                //     leftColFadeIn2Btn,
+                //     { y: '80rem' }, // Initial state
+                //     {
+                //         y: '0', // Target state
+                //         scrollTrigger: {
+                //             trigger: leftColFadeIn2Btn,
+                //             start: 'clamp(bottom bottom)',
+                //             end: 'clamp(bottom 20%)',
+                //             toggleActions: 'play none reverse none',
+                //         },
+                //     }
+                // );
 
                 gsap.fromTo(
                     row2,
                     { y: '100rem', position: 'fixed' }, // Initial state
                     {
                         y: '0', // Moves into view
-                        bottom: '35%',
+                        bottom: '25%',
                         scrollTrigger: {
-                            trigger: section3Btn,
-                            start: 'bottom top',
-                            end: 'bottom bottom',
+                            trigger: section3,
+                            start: 'top-=1000  bottom',
+                            end: 'top-=1000  bottom',
                             toggleActions: 'play none reverse none',
                         },
                     }
@@ -415,9 +435,9 @@ export default {
                     {
                         y: '-100rem', // Moves out of view upwards
                         scrollTrigger: {
-                            trigger: leftColFadeIn2Btn,
-                            start: 'bottom top',
-                            end: 'bottom bottom',
+                            trigger: section3,
+                            start: 'top-=500  bottom',
+                            end: 'top-=500  bottom',
                             toggleActions: 'play none reverse none',
                         },
                     }
@@ -425,9 +445,9 @@ export default {
 
                 const growTitleTl = gsap.timeline({
                     scrollTrigger: {
-                        trigger: leftColFadeIn2Btn,
-                        start: 'bottom top',
-                        end: 'bottom bottom',
+                        trigger: section3,
+                        start: 'top-=500  bottom',
+                        end: 'top-=500  bottom',
                         toggleActions: 'play none reverse none',
                     },
                 });
@@ -448,9 +468,9 @@ export default {
 
                 const cardsTl = gsap.timeline({
                     scrollTrigger: {
-                        trigger: row4,
-                        start: 'bottom top',
-                        end: 'bottom bottom',
+                        trigger: section3,
+                        start: 'top  bottom',
+                        end: 'top  bottom',
                         toggleActions: 'play none reverse none',
                     },
                 });
@@ -471,8 +491,8 @@ export default {
                 const section4tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: row4,
-                        start: 'bottom+=500 top',
-                        end: 'bottom bottom',
+                        start: 'bottom-=2000 top',
+                        end: 'bottom-=2000 bottom',
                         toggleActions: 'play none reverse none',
                     },
                 });
@@ -508,7 +528,7 @@ export default {
                         {
                             position: 'fixed',
                             bottom: '0',
-                            yPercent: -40,
+                            yPercent: window.innerHeight <= 1000 ? -13 : -40, // Adjust based on min-height
                             opacity: 1,
                         },
                         '<'
@@ -527,10 +547,10 @@ export default {
                 const row5tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: row4,
-                        start: 'bottom+=1400 top',
-                        end: 'bottom bottom',
+                        start: 'bottom-=1500 top',
+                        end: 'bottom-=1500 bottom',
                         toggleActions: 'play none reverse none',
-                        scrub: 2,
+                        scrub: 3,
                     },
                 });
 
@@ -558,8 +578,8 @@ export default {
                 const footertl = gsap.timeline({
                     scrollTrigger: {
                         trigger: row4,
-                        start: 'clamp(bottom+=1800 top)',
-                        end: 'bottom bottom',
+                        start: 'bottom-=1000 top',
+                        end: 'bottom-=1000 bottom',
                         toggleActions: 'play none reverse none',
                         scrub: 2,
                     },
@@ -591,6 +611,7 @@ export default {
                         row6,
                         {
                             yPercent: -180,
+                            opacity: 0,
                         },
                         '<'
                     )
@@ -598,6 +619,7 @@ export default {
                         rightColFadeIn3,
                         {
                             yPercent: -70,
+                            opacity: 0,
                         },
                         '<'
                     );
@@ -810,7 +832,12 @@ export default {
                     .fromTo(
                         suicideAstro,
                         { opacity: '0' },
-                        { yPercent: -170, opacity: '1', duration: 1.2, ease: 'power2.inOut' },
+                        {
+                            yPercent: window.innerHeight <= 1000 ? -120 : -170, // Adjust based on min-height
+                            opacity: '1',
+                            duration: 1.2,
+                            ease: 'power2.inOut',
+                        },
                         '<'
                     );
 
@@ -1091,62 +1118,62 @@ export default {
 
         // meet our team modal
 
-        let modal = document.querySelectorAll('.acfm-list-meet-our-team__backdrop');
-        let modalComp = document.querySelectorAll('.acfm-list-meet-our-team__modal');
-        let modalBtns = document.querySelectorAll('.acfm-list-meet-our-team__button');
-        let cards = document.querySelectorAll('.acfm-list-meet-our-team__item');
-        const closeBtns = document.querySelectorAll('.close-btn');
-        const xBtn = document.querySelectorAll('.svg-x');
-
-        modal.forEach((item, i) => {
-            item.addEventListener('click', e => {
-                if (!modalComp[i].contains(e.target)) {
-                    item.style.display = 'none';
-                }
-            });
-        });
-
-        if (modal) {
-            cards.forEach((card, i) => {
-                const modalBtn = modalBtns[i];
-
-                modalBtn.id = i;
-
-                card.setAttribute('data-card-id', modalBtn.id);
-            });
-
-            modalBtns.forEach(button => {
-                button.addEventListener('click', function() {
-                    const buttonId = this.id;
-
-                    const modal = document.querySelector(
-                        `[data-card-id="${buttonId}"] .acfm-list-meet-our-team__backdrop`
-                    );
-
-                    if (modal) {
-                        modal.style.display = 'flex';
-                    }
-                });
-            });
-
-            closeBtns.forEach(button => {
-                button.addEventListener('click', function() {
-                    const modal = this.closest('.acfm-list-meet-our-team__backdrop');
-                    if (modal) {
-                        modal.style.display = 'none';
-                    }
-                });
-            });
-
-            xBtn.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const modal = this.closest('.acfm-list-meet-our-team__backdrop');
-                    if (modal) {
-                        modal.style.display = 'none';
-                    }
-                });
-            });
-        }
+        // let modal = document.querySelectorAll('.acfm-list-meet-our-team__backdrop');
+        // let modalComp = document.querySelectorAll('.acfm-list-meet-our-team__modal');
+        // let modalBtns = document.querySelectorAll('.acfm-list-meet-our-team__button');
+        // let cards = document.querySelectorAll('.acfm-list-meet-our-team__item');
+        // const closeBtns = document.querySelectorAll('.close-btn');
+        // const xBtn = document.querySelectorAll('.svg-x');
+        //
+        // modal.forEach((item, i) => {
+        //     item.addEventListener('click', e => {
+        //         if (!modalComp[i].contains(e.target)) {
+        //             item.style.display = 'none';
+        //         }
+        //     });
+        // });
+        //
+        // if (modal) {
+        //     cards.forEach((card, i) => {
+        //         const modalBtn = modalBtns[i];
+        //
+        //         modalBtn.id = i;
+        //
+        //         card.setAttribute('data-card-id', modalBtn.id);
+        //     });
+        //
+        //     modalBtns.forEach(button => {
+        //         button.addEventListener('click', function() {
+        //             const buttonId = this.id;
+        //
+        //             const modal = document.querySelector(
+        //                 `[data-card-id="${buttonId}"] .acfm-list-meet-our-team__backdrop`
+        //             );
+        //
+        //             if (modal) {
+        //                 modal.style.display = 'flex';
+        //             }
+        //         });
+        //     });
+        //
+        //     closeBtns.forEach(button => {
+        //         button.addEventListener('click', function() {
+        //             const modal = this.closest('.acfm-list-meet-our-team__backdrop');
+        //             if (modal) {
+        //                 modal.style.display = 'none';
+        //             }
+        //         });
+        //     });
+        //
+        //     xBtn.forEach(btn => {
+        //         btn.addEventListener('click', function() {
+        //             const modal = this.closest('.acfm-list-meet-our-team__backdrop');
+        //             if (modal) {
+        //                 modal.style.display = 'none';
+        //             }
+        //         });
+        //     });
+        // }
 
         // tilt js
 
@@ -1423,6 +1450,7 @@ export default {
             adaptiveHeight: true,
             fade: true,
             cssEase: 'linear',
+            autoplaySpeed: 1000,
         });
 
         // Wait for the DOM to be ready, then insert the progress bar

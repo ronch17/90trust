@@ -113,6 +113,12 @@
     }
 
     .section4 {
+        @media (min-height: 1000px) {
+            .container {
+                transform: translate(-50%, -13%);
+            }
+        }
+
         .acfm-row {
             min-width: 135rem;
         }
@@ -147,6 +153,24 @@
     }
 }
 
+.faq-bg {
+    .container {
+        background: $brand_dark;
+        border-radius: 2rem;
+
+        @media #{$xl} {
+            padding: 10rem;
+        }
+    }
+
+    @media #{$xl} {
+        .acfm-image {
+            width: max-content;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
 .acfm-row:has(.trade-markets-assets) {
     color: $brand_dark;
     background: $brand_white;
@@ -172,7 +196,7 @@
 .safety-and-trust {
     @media #{$until_xl} {
         .acfm-hero {
-            height: 50vh;
+            height: 75vh;
         }
     }
 }
