@@ -11,6 +11,10 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
+    @media #{$until_xl} {
+        padding: 0;
+    }
+
     &__item {
         display: flex;
         gap: 1rem;

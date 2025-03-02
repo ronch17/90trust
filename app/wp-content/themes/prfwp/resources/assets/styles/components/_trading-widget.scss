@@ -4,13 +4,28 @@
         &-container {
             @include brand-shadow();
 
-            width: 100%;
-            margin: 0 auto;
+            width: 100% !important;
+            margin: 1rem auto;
             border: 1rem solid $brand_primary;
         }
 
         &-copyright {
             display: none;
+        }
+    }
+}
+
+.trading-widgets {
+    @media #{$until_xl} {
+        .acfm-col-lg-14 {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .acfm-col-lg-17 {
+            display: flex;
+            flex-direction: column;
         }
     }
 }

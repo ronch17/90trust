@@ -7,6 +7,10 @@
     list-style: none;
     gap: 2.5rem;
 
+    @media #{$until_xl} {
+        padding: 0;
+    }
+
     &__item {
         display: flex;
         gap: 1rem;
