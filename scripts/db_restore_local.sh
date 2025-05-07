@@ -11,4 +11,4 @@ source ./variables.sh
 
 cd ..
 
-gunzip -c  './backup/__after-commit__~Ac~text~fix~__wp-ashbournewm-test-2025-01-23-17:45:09.sql.gz' | docker exec -i ${LOCAL_DOCKER_NAMESPACE}-db-1 mariadb -u wordpress --password=${DB_PASSWORD} wordpress
+gunzip -c  './backup/__after-commit__~mobile~fix~__wp-90trust-test-2025-03-10-20:23:51.sql.gz' | docker exec -i ${LOCAL_DOCKER_NAMESPACE}-db-1 mariadb -u wordpress --password=${DB_PASSWORD} wordpress

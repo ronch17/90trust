@@ -229,6 +229,10 @@ $shadows-big: multiple-box-shadow(100);
         margin-bottom: -35rem;
     }
 
+    @media (max-height: 800px) {
+        margin-bottom: -15rem;
+    }
+
     @media #{$until_lg} {
         height: 75vh;
         margin-bottom: -15rem;
@@ -265,6 +269,12 @@ $shadows-big: multiple-box-shadow(100);
         @media #{$until_xxl} {
             .acfm-title {
                 font-size: 6rem;
+            }
+        }
+
+        @media #{$until_sm} {
+            .acfm-title {
+                font-size: 3rem;
             }
         }
     }

@@ -16,6 +16,13 @@
   .page-loader .svg-Logo {
     margin: -9rem;
   }
+
+  @media (max-width: 470px) {
+    .page-loader .svg-Logo {
+      margin: -4rem -40px;
+      translate: 16% 0;
+    }
+  }
 </style>
 
 <div id="page-loader" class="page-loader">

@@ -129,6 +129,7 @@ export default {
                 gsap.set(heroContainer, {
                     position: 'fixed',
                     bottom: '0',
+                    yPercent: window.innerHeight <= 1000 ? 10 : 0,
                 });
 
                 gsap.set(starsBg, {
@@ -419,7 +420,7 @@ export default {
                     { y: '100rem', position: 'fixed' }, // Initial state
                     {
                         y: '0', // Moves into view
-                        bottom: '25%',
+                        bottom: window.innerHeight <= 1000 ? '12%' : '25%',
                         scrollTrigger: {
                             trigger: section3,
                             start: 'top-=1000  bottom',
@@ -528,7 +529,11 @@ export default {
                         {
                             position: 'fixed',
                             bottom: '0',
-                            yPercent: window.innerHeight <= 1000 ? -13 : -40, // Adjust based on min-height
+                            yPercent:window.innerHeight <= 800
+    ? 0
+    : window.innerHeight <= 1000
+    ? -13
+    : -40, // Adjust based on min-height
                             opacity: 1,
                         },
                         '<'

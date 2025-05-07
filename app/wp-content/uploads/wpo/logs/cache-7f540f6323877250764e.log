@@ -662,3 +662,7 @@
 [2025-03-02 08:53:07 : INFO] - Cache for URL: http://90trust.test/market-insights/ has been purged, triggered by action: save_post 
 [2025-03-02 08:58:22 : INFO] - Cache for associated Polylang translation posts for Title: "Market Insights" have been purged 
 [2025-03-02 08:58:22 : INFO] - Cache for URL: http://90trust.test/market-insights/ has been purged, triggered by action: save_post 
+[2025-05-07 16:16:40 : INFO] - Cache for associated Polylang translation posts for Title: "Auto Draft" have been purged 
+[2025-05-07 16:16:40 : INFO] - Cache for URL: http://90trust.test/?p=3730 has been purged, triggered by action: save_post 
+[2025-05-07 16:16:40 : INFO] - Cache for all archives page associated with post_type: post and Title: "Auto Draft" have been purged, triggered by action: save_post 
+[2025-05-07 16:16:59 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 

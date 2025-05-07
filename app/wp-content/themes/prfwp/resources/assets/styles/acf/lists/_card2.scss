@@ -51,7 +51,7 @@
 
                     @media #{$until_sm} {
                         width: 25rem !important;
-                        transform: translate(-50%, -65%);
+                        transform: translate(-50%, -72%)
                     }
                 }
 
@@ -64,6 +64,13 @@
                     height: 23rem;
                     max-height: 23rem;
                     transition: max-height 0.4s ease-in-out;
+
+                    @media #{$until_sm} {
+                    height: 32rem;
+                    max-height: 32rem;
+                                padding: 2rem;
+
+                    }
                 }
             }
         }
@@ -103,9 +110,14 @@
             margin-bottom: -10rem;
         }
 
-        @media (#{$xl}) and (#{$until_xxl}) {
-            width: 115%;
-            height: 20vh;
+        // @media (#{$xl}) and (#{$until_xxl}) {
+        //     width: 115%;
+        //     height: 20vh;
+        // }
+
+        @media (max-height: 800px) {
+            width: 108%;
+            height: 26vh;
         }
     }
 
@@ -131,6 +143,10 @@
         @media #{$until_xxl} {
             padding: 0;
             font-size: 8px;
+        }
+
+        @media #{$until_sm} {
+            font-size: 16px;
         }
     }
 

@@ -5,7 +5,7 @@ services:
     depends_on:
       - db
     ports:
-      - 127.0.4.19:80:80
+      - 127.0.0.2:80:80
     volumes:
       - ./app/legal:/var/www/html/legal/
       - ./app/wp-content:/var/www/html/wp-content/
@@ -35,6 +35,7 @@ services:
 
   phpmyadmin:
     image:                 phpmyadmin/phpmyadmin:latest
+    platform: linux/amd64
     depends_on:
       - db
     environment:
@@ -42,4 +43,4 @@ services:
       TESTSUITE_PASSWORD:   wordpress
     restart:               always
     ports:
-      - 127.0.4.19:8090:80
+      - 127.0.0.2:8090:80
